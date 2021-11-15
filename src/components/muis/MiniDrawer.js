@@ -53,7 +53,19 @@ let theme = createTheme({
       color: 'white',
     },
     fontFamily: [
-     'Josefin Sans',
+     'Paytone One',
+     'sans-serif',
+    ].join(','),
+  }
+});
+
+let themee = createTheme({
+  typography: {
+    h2: {
+      color: 'white',
+    },
+    fontFamily: [
+     'Lobster',
      'sans-serif',
     ].join(','),
   }
@@ -215,39 +227,40 @@ const Head = () => {
         <Avatar
           alt="Haja Niaina"
           src='./test.png'
-          sx={{ width: '100%', height:'100%' }}
+          sx={{  width: '100%', height:'100%' }}
           variant="square" //rounded
           />
       </Grid>  
       <Grid xs={12} sm={6} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
           <ThemeProvider theme={theme}>
-            <Typography variant="h2">
-              Hajaniaina ANDRIANAVALONA
+            <Typography variant="h4" gutterBottom>
+              OSISoft PI Administrator,
             </Typography>
-            <Typography variant="h3">
-              OSISOFT PI Administrator
+          </ThemeProvider>         
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4" gutterBottom>
+              Full Stack Dev
             </Typography>
-            <p>Address: TOAMASINA, MADAGASCAR</p>
-            <p>Open to position: </p>
-            <p>Full Stack Web Developer (Flask-React)</p>
-            <p>React Developer</p>
-            <p>AI Developer (python-pytorch)</p>
-            <div>Data Scientist (postgreSQL-python)</div>
           </ThemeProvider>
       </Grid>  
-      <Grid xs={12} sm={6} md={4} lg={3} xl={2} sx={{ maxWidth: 400, borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+      <Grid xs={12} sm={6} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
         <ThemeProvider theme={theme}>
-          <Typography variant="h2" gutterBottom>
-              Welcome to React
+          <Typography variant="h4" gutterBottom>
+            Hajaniaina ANDRIANAVALONA
           </Typography>
         </ThemeProvider>
-        <Button variant="contained" color="secondary">Ready To Go</Button>
+        <Button variant="contained" color="secondary">Download Resume</Button>
       </Grid>  
       <Grid xs={12} sm={6} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
         <h1>Hello</h1>
       </Grid>  
       <Grid xs={12} sm={6} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
-        <h1>Hello</h1>
+        
+        <ThemeProvider theme={themee}>
+          <Typography variant="h2" gutterBottom>
+            Hello Haja
+          </Typography>
+        </ThemeProvider>
       </Grid>  
       <Grid xs={12} sm={6} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
         <h1>Hello</h1>
