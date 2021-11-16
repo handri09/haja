@@ -157,7 +157,7 @@ export default function MiniDrawer() {
 
         <List sx={{ bgcolor:'#071a2f', color:'white' }}>
           {['Home', 'Resume', 'Projects', 'Contact'].map((text, index) => (
-            <ListItem button component={Link} to={'/my-resume/'+text} onClick={() => {
+            <ListItem button component={Link} to={'/haja/'+text} onClick={() => {
               console.log(active)
             }} key={text} >
               <ListItemIcon>
@@ -175,10 +175,10 @@ export default function MiniDrawer() {
 
       <Box component="main" sx={{ flexGrow: 1, p:0.7, bgcolor: 'white', marginTop:'1.5%'  }}>
         <Routes>
-          <Route path='/my-resume/Home' element={<Head />} />
-          <Route path='/my-resume/Projects' element={<Projects />} />  
-          <Route path='/my-resume/Resume' element={<Part />} />  
-          <Route path='/my-resume/Contact' element={<Header />} /> 
+          <Route path='/haja/Home' element={<Head />} />
+          <Route path='/haja/Projects' element={<Projects />} />  
+          <Route path='/haja/Resume' element={<Part />} />  
+          <Route path='/haja/Contact' element={<Header />} /> 
         </Routes>
       </Box>
 

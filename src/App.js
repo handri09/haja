@@ -75,4 +75,4 @@ const Part = () => {
 
 //'#071a2f'
 //'#001e3c'
-//<Container maxWidth='xxl' sx={{ bgcolor: 'white', height:'50%', textAlign: 'center', color:'white' }} >
+//<Container maxWidth='xxl' sx={{ bgcolor: 'white', height:'50%', textAlign: 'center', color:'white' }}>
