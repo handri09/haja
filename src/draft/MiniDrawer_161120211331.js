@@ -69,19 +69,6 @@ let themee = createTheme({
   }
 });
 
-let themepre = createTheme({
-  typography: {
-    h2: {
-      color: 'white',
-    },
-    fontFamily: [
-     'IBM Plex Sans',
-     'sans-serif',
-    ].join(','),
-  }
-});
-
-
 const drawerWidth = 180;
 
 const HomeIcon = createSvgIcon(
@@ -200,18 +187,16 @@ export default function MiniDrawer() {
         <Divider />
 
         <List sx={{ bgcolor:'#071a2f', color:'white' }}>
-          {['Home', 'Resume', 'Projects', 'Contact', 'Skills', 'Experiencies', 'Formations' ].map((text, index) => (
+          {['Home', 'Resume', 'Projects', 'Contact'].map((text, index) => (
             <ListItem button component={Link} to={'/haja/'+text} onClick={() => {
               console.log(active)
             }} key={text} >
               <ListItemIcon>
-                { text === 'Skills' && <HomeIcon color='primary' sx={{ fontSize: 30 }} />}
+                { text === 'Homed' && <HomeIcon color='primary' sx={{ fontSize: 30 }} />}
                 { text === 'Home' && <HomeOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
                 { text === 'Resume' && <NoteOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
                 { text === 'Projects' && <AccountTreeOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
                 { text === 'Contact' && <ContactPhoneOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
-                { text === 'Experiencies' && <AccountTreeOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
-                { text === 'Formations' && <ContactPhoneOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
@@ -235,53 +220,42 @@ export default function MiniDrawer() {
 const Head = () => {
   return (      
     <Grid container spacing={1}>
-      <Grid xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
         <ThemeProvider theme={theme}>
-          <Typography variant="h3" gutterBottom>
+          <Typography variant="h4" gutterBottom>
             Hajaniaina ANDRIANAVALONA
           </Typography>
         </ThemeProvider>
-      </Grid>
 
-      <Grid xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5}  sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
-        <ThemeProvider theme={theme}>
-          <Typography variant="h5" gutterBottom>
-            OSISoft PI Administrator (Data Engineer),
-          </Typography>
-          <Typography variant="h5" gutterBottom>
-            Data Scientist (Python),
-          </Typography>
-          <Typography variant="h5" gutterBottom>
-            Full Stack Developer (Python-React),
-          </Typography>
-          <Typography variant="h5" gutterBottom>
-            Front-End Developer (React JS - React Native - Redux),
-          </Typography>
-          <Typography variant="h5" gutterBottom>
-            BackEnd Developer (Python Flask Restful)
-          </Typography>
-          <Typography variant="h5" gutterBottom>
-            AI Programming with Pytorch (Python)
-          </Typography>
-        </ThemeProvider> 
-        <Button variant="contained" color="secondary">Download Resume</Button>   
-      </Grid>
-      <Grid xs={12} sm={12} md={4} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
         <Avatar
           alt="Haja Niaina"
           src='./test.png'
           sx={{  width: '100%', height:'100%' }}
           variant="square" //rounded
-          />     
-      </Grid>     
-      <Grid xs={12} sm={12} md={8} lg={8} xl={9.6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
-        <Stack direction='row' spacing={1} >
-          <Button variant="contained" color="secondary">Experiencies</Button>   
-          <Button variant="contained" color="secondary">Formations</Button>   
-          <Button variant="contained" color="secondary">Skills</Button>   
-          <Button variant="contained" color="secondary">Interest</Button>   
-          <Button variant="contained" color="secondary">Download Resume</Button>   
-        </Stack>
+          />
+      </Grid>  
+
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <ThemeProvider theme={theme}>
+          <Typography variant="h4" gutterBottom>
+            Hajaniaina ANDRIANAVALONA
+          </Typography>
+        </ThemeProvider>
+        <Button variant="contained" color="secondary">Download Resume</Button>
+      </Grid> 
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <ThemeProvider theme={theme}>
+          <Typography variant="h4" gutterBottom>
+            OSISoft PI Administrator,
+          </Typography>
+        </ThemeProvider>         
+        <ThemeProvider theme={theme}>
+          <Typography variant="h4" gutterBottom>
+            Full Stack Dev
+          </Typography>
+        </ThemeProvider>
+      </Grid> 
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
         <h1>Hello</h1>
       </Grid>  
       <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
