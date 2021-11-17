@@ -242,8 +242,52 @@ const Head = () => {
           </Typography>
         </ThemeProvider>
       </Grid>
-
-      <Grid xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5}  sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+      <Grid xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <Stack direction='row' divider={<Divider orientation="vertical" flexItem color='white'/>} spacing={2}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              Data Engineer
+            </Typography>
+          </ThemeProvider>   
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              Data Scientist
+            </Typography>
+          </ThemeProvider> 
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              Full Stack WEB
+            </Typography>
+          </ThemeProvider> 
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              Mobile Developer
+            </Typography>
+          </ThemeProvider> 
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              AI Developer
+            </Typography>
+          </ThemeProvider> 
+          <Button variant="contained" color="primary">Experiencies</Button>  
+        </Stack>       
+      </Grid>
+      <Grid xs={12} sm={12} md={4} lg={3} xl={2.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <Avatar
+          alt="Haja Niaina"
+          src='./test.png'
+          sx={{  width: '100%', height:'100%' }}
+          variant="square" //rounded
+          />  
+        <Stack direction='column' spacing={1} centered>    
+          <Button variant="contained" color="primary">Experiencies</Button>   
+          <Button variant="contained" color="secondary">Formations</Button>   
+          <Button variant="contained" color="warning">Skills</Button>   
+          <Button variant="contained" color="success">Interest</Button>   
+          <Button variant="contained" color="error">Download Resume</Button>   
+        </Stack>   
+      </Grid>  
+      <Grid xs={12} sm={12} md={8} lg={9} xl={9.5} marginBottom={0.5}  sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
         <ThemeProvider theme={theme}>
           <Typography variant="h5" gutterBottom>
             OSISoft PI Administrator (Data Engineer),
@@ -263,28 +307,19 @@ const Head = () => {
           <Typography variant="h5" gutterBottom>
             AI Programming with Pytorch (Python)
           </Typography>
-        </ThemeProvider> 
-        <Button variant="contained" color="secondary">Download Resume</Button>   
+        </ThemeProvider>
+        <Button variant="contained" color="secondary">Download Resume</Button>
       </Grid>
-      <Grid xs={12} sm={12} md={4} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
-        <Avatar
-          alt="Haja Niaina"
-          src='./test.png'
-          sx={{  width: '100%', height:'100%' }}
-          variant="square" //rounded
-          />     
-      </Grid>     
-      <Grid xs={12} sm={12} md={8} lg={8} xl={9.6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
-        <Stack direction='row' spacing={1} >
+      <Grid xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <Stack direction='row' spacing={3} centered>
           <Button variant="contained" color="secondary">Experiencies</Button>   
           <Button variant="contained" color="secondary">Formations</Button>   
           <Button variant="contained" color="secondary">Skills</Button>   
           <Button variant="contained" color="secondary">Interest</Button>   
           <Button variant="contained" color="secondary">Download Resume</Button>   
         </Stack>
-        <h1>Hello</h1>
-      </Grid>  
-      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
         <ThemeProvider theme={themee}>
           <Typography variant="h2" gutterBottom>
             Hello Haja
