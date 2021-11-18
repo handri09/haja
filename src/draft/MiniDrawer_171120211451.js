@@ -20,9 +20,6 @@ import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom'
 import { createSvgIcon } from '@mui/material/utils';
 
-// Import Data
-import { presentation } from '../data/data'
-
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import HomeWorkOutlinedIcon from '@mui/icons-material/HomeWorkOutlined';
 import NoteOutlinedIcon from '@mui/icons-material/NoteOutlined';
@@ -36,14 +33,17 @@ import {
   ThemeProvider,
 } from '@mui/material/styles';
 
+
 import Header from '../header/Head'
 import Projects from '../Projects'
+
 
 import { 
   Container, Grid, Paper, Avatar, Stack, Chip, Button
   } from '@mui/material'
 
 import { Routes, Route, useParams } from 'react-router-dom'
+
 
 let theme = createTheme({
   typography: {
@@ -59,9 +59,8 @@ let theme = createTheme({
 
 let themee = createTheme({
   typography: {
-    p: {
+    h2: {
       color: 'white',
-      fontSize: 30,
     },
     fontFamily: [
      'Lobster',
@@ -81,6 +80,7 @@ let themepre = createTheme({
     ].join(','),
   }
 });
+
 
 const drawerWidth = 180;
 
@@ -174,7 +174,7 @@ export default function MiniDrawer() {
       <AppBar position="fixed" open={open} sx={{ bgcolor: '#071a2f' }}>
         <Toolbar>
           <IconButton
-            color="inherit" //inherit
+            color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
@@ -205,19 +205,20 @@ export default function MiniDrawer() {
               console.log(active)
             }} key={text} >
               <ListItemIcon>
-                { text === 'Skills' && <HomeIcon sx={{ fontSize: 30, color:'white'  }} />}
-                { text === 'Home' && <HomeOutlinedIcon sx={{ fontSize: 30, color:'white' }} />}
-                { text === 'Resume' && <NoteOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
-                { text === 'Projects' && <AccountTreeOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
-                { text === 'Contact' && <ContactPhoneOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
-                { text === 'Experiencies' && <AccountTreeOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
-                { text === 'Formations' && <ContactPhoneOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
+                { text === 'Skills' && <HomeIcon color='primary' sx={{ fontSize: 30 }} />}
+                { text === 'Home' && <HomeOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
+                { text === 'Resume' && <NoteOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
+                { text === 'Projects' && <AccountTreeOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
+                { text === 'Contact' && <ContactPhoneOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
+                { text === 'Experiencies' && <AccountTreeOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
+                { text === 'Formations' && <ContactPhoneOutlinedIcon color='primary' sx={{ fontSize: 30 }} />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
       </Drawer>
+
       <Box component="main" sx={{ flexGrow: 1, p:0.7, bgcolor: 'white', marginTop:'1.5%'  }}>
         <Routes>
           <Route path='/haja/Home' element={<Head />} />
@@ -234,74 +235,82 @@ export default function MiniDrawer() {
 const Head = () => {
   return (      
     <Grid container spacing={1}>
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+      <Grid xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
         <ThemeProvider theme={theme}>
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h3" gutterBottom>
             Hajaniaina ANDRIANAVALONA
           </Typography>
         </ThemeProvider>
       </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
-        <Stack direction='row' divider={<Divider orientation="vertical" flexItem color='white'/>} spacing={2} justifyContent='center'>
-          <ThemeProvider theme={themee}>
-            <Typography variant="p" gutterBottom>
-              OSISoft PI System Administrator & Developer
+      <Grid xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <Stack direction='row' divider={<Divider orientation="vertical" flexItem color='white'/>} spacing={2}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              Data Engineer
             </Typography>
           </ThemeProvider>   
-          <ThemeProvider theme={themee}>
-            <Typography variant="p" gutterBottom>
-              Data Scientist & Full Stack Developer (Python-React)
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              Data Scientist
             </Typography>
           </ThemeProvider> 
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              Full Stack WEB
+            </Typography>
+          </ThemeProvider> 
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              Mobile Developer
+            </Typography>
+          </ThemeProvider> 
+          <ThemeProvider theme={theme}>
+            <Typography variant="h5" gutterBottom>
+              AI Developer
+            </Typography>
+          </ThemeProvider> 
+          <Button variant="contained" color="primary">Experiencies</Button>  
         </Stack>       
       </Grid>
-
-      <Grid item xs={12} sm={5} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+      <Grid xs={12} sm={12} md={4} lg={3} xl={2.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
         <Avatar
           alt="Haja Niaina"
           src='./test.png'
           sx={{  width: '100%', height:'100%' }}
-          variant="rounded" //square
+          variant="square" //rounded
           />  
-        <Stack direction='column' spacing={1}>    
+        <Stack direction='column' spacing={1} centered>    
           <Button variant="contained" color="primary">Experiencies</Button>   
           <Button variant="contained" color="secondary">Formations</Button>   
           <Button variant="contained" color="warning">Skills</Button>   
           <Button variant="contained" color="success">Interest</Button>   
           <Button variant="contained" color="error">Download Resume</Button>   
-        </Stack> 
-        <p>{presentation}</p>  
+        </Stack>   
+      </Grid>  
+      <Grid xs={12} sm={12} md={8} lg={9} xl={9.5} marginBottom={0.5}  sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <ThemeProvider theme={theme}>
+          <Typography variant="h5" gutterBottom>
+            OSISoft PI Administrator (Data Engineer),
+          </Typography>
+          <Typography variant="h5" gutterBottom>
+            Data Scientist (Python),
+          </Typography>
+          <Typography variant="h5" gutterBottom>
+            Full Stack Developer (Python-React),
+          </Typography>
+          <Typography variant="h5" gutterBottom>
+            Front-End Developer (React JS - React Native - Redux),
+          </Typography>
+          <Typography variant="h5" gutterBottom>
+            BackEnd Developer (Python Flask Restful)
+          </Typography>
+          <Typography variant="h5" gutterBottom>
+            AI Programming with Pytorch (Python)
+          </Typography>
+        </ThemeProvider>
+        <Button variant="contained" color="secondary">Download Resume</Button>
       </Grid>
-
-      <Grid container xs={12} sm={7} md={8} lg={9} xl={10} marginBottom={0.5}  sx={{ borderRadius : 0, bgcolor:'error.dark' }} padding={1}>
-        <Grid item xs={12} sm={12} md={5} lg={5} xl={4} sx={{ borderRadius : 0, bgcolor:'darkcyan' }}>
-          <ThemeProvider theme={theme}>
-            <Typography variant="h5" gutterBottom>
-              OSISoft PI Admin & Developer
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              Data Scientist (Python)
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              Full Stack Developer (Python-React)
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              Front-End Developer (React JS - Redux)
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              BackEnd Developer (Python Flask Restful)
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              AI Programming (Pytorch)
-            </Typography>
-          </ThemeProvider>
-          <Button variant="contained" color="secondary">Download Resume</Button>
-        </Grid>        
-        <Grid item xs={12} sm={12} md={7} lg={7} xl={8} sx={{ borderRadius : 0, bgcolor:'primary.dark' }}>
-          <h2>Hello</h2>
-        </Grid>
-      </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+      <Grid xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
         <Stack direction='row' spacing={3} centered>
           <Button variant="contained" color="secondary">Experiencies</Button>   
           <Button variant="contained" color="secondary">Formations</Button>   
@@ -310,6 +319,76 @@ const Head = () => {
           <Button variant="contained" color="secondary">Download Resume</Button>   
         </Stack>
       </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <ThemeProvider theme={themee}>
+          <Typography variant="h2" gutterBottom>
+            Hello Haja
+          </Typography>
+        </ThemeProvider>
+      </Grid>  
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>  
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>  
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>  
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>  
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>  
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>  
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>  
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>  
+      <Grid xs={12} sm={12} md={6} lg={4} xl={2.4} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'error.dark' }} padding={1}>
+        <h1>Hello</h1>
+      </Grid>  
     </Grid>
   );
 }
