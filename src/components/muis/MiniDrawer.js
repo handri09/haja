@@ -20,8 +20,20 @@ import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom'
 import { createSvgIcon } from '@mui/material/utils';
 
+
+import ContactsIcon from '@mui/icons-material/Contacts';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
+
 // Import Data
 import { presentation } from '../data/data'
+import Accordion from './accordion'
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import HomeWorkOutlinedIcon from '@mui/icons-material/HomeWorkOutlined';
@@ -61,7 +73,7 @@ let themee = createTheme({
   typography: {
     p: {
       color: 'white',
-      fontSize: 30,
+      fontSize: 25,
     },
     fontFamily: [
      'Lobster',
@@ -166,7 +178,7 @@ export default function MiniDrawer() {
     setOpen(false);
   };
 
-  const active = 'fvdvfvd'
+  const active = 'nothing at all'
 
   return (
     <Box sx={{ display: 'flex', bgcolor:'white' }}>
@@ -202,9 +214,10 @@ export default function MiniDrawer() {
         <List sx={{ bgcolor:'#071a2f', color:'white' }}>
           {['Home', 'Resume', 'Projects', 'Contact', 'Skills', 'Experiencies', 'Formations' ].map((text, index) => (
             <ListItem button component={Link} to={'/haja/'+text} onClick={() => {
+              active = text;
               console.log(active)
-            }} key={text} >
-              <ListItemIcon>
+            }} key={index} >
+              <ListItemIcon key={index} >
                 { text === 'Skills' && <HomeIcon sx={{ fontSize: 30, color:'white'  }} />}
                 { text === 'Home' && <HomeOutlinedIcon sx={{ fontSize: 30, color:'white' }} />}
                 { text === 'Resume' && <NoteOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
@@ -215,8 +228,32 @@ export default function MiniDrawer() {
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
-          ))}
+          ))}  
         </List>
+
+        <Divider />
+
+        <List sx={{ bgcolor:'white', color:'#001e3c' }}>
+          {['linkedin', 'github', 'instagram', 'facebook', 'youtube', 'twitter', 'whatsapp', 'stackOverflow' ].map((text, index) => (
+            <ListItem button key={index} component={Link} to={'/haja/'+"Home"} onClick={() => {
+              console.log(active)
+            }} >
+              <ListItemIcon key={index}>
+                { text === 'linkedin' && <LinkedInIcon sx={{ fontSize: 30, color:'primary.dark'  }} />}
+                { text === 'github' && <GitHubIcon sx={{ fontSize: 30, color:'black' }} />}
+                { text === 'instagram' && <InstagramIcon color='primary' sx={{ fontSize: 30, color:'error.dark' }} />}
+                { text === 'facebook' && <FacebookIcon color='primary' sx={{ fontSize: 30, color:'bleu' }} />}
+                { text === 'youtube' && <YouTubeIcon color='primary' sx={{ fontSize: 30, color:'warning.dark' }} />}
+                { text === 'twitter' && <TwitterIcon color='primary' sx={{ fontSize: 30, color:'bleu' }} />}
+                { text === 'whatsapp' && <WhatsAppIcon color='primary' sx={{ fontSize: 30, color:'green' }} />}
+                { text === 'stackOverflow' && <StackedLineChartIcon color='primary' sx={{ fontSize: 30, color:'secondary.dark' }} />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}  
+          <p> https://stackoverflow.com/users/edit/17447025 </p>
+        </List>
+
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p:0.7, bgcolor: 'white', marginTop:'1.5%'  }}>
         <Routes>
@@ -234,14 +271,15 @@ export default function MiniDrawer() {
 const Head = () => {
   return (      
     <Grid container spacing={1}>
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor: '#001e3c' }} padding={1}>
         <ThemeProvider theme={theme}>
           <Typography variant="h4" gutterBottom>
             Hajaniaina ANDRIANAVALONA
           </Typography>
         </ThemeProvider>
       </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+
+      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
         <Stack direction='row' divider={<Divider orientation="vertical" flexItem color='white'/>} spacing={2} justifyContent='center'>
           <ThemeProvider theme={themee}>
             <Typography variant="p" gutterBottom>
@@ -256,14 +294,38 @@ const Head = () => {
         </Stack>       
       </Grid>
 
-      <Grid item xs={12} sm={5} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
+      <Grid item xs={12} sm={5} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
         <Avatar
           alt="Haja Niaina"
           src='./test.png'
           sx={{  width: '100%', height:'100%' }}
           variant="rounded" //square
           />  
-        <Stack direction='column' spacing={1}>    
+        <Stack direction='column' spacing={0}> 
+          <ThemeProvider theme={themee}>
+            <Typography variant="h5" gutterBottom>
+              31 years old
+            </Typography>
+          </ThemeProvider> 
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h5" gutterBottom>
+              Toamasina, Madagascar
+            </Typography>
+          </ThemeProvider>  
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h6" gutterBottom>
+              Maried
+            </Typography>
+          </ThemeProvider> 
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h6" gutterBottom>
+              Open to opportunities
+            </Typography>
+          </ThemeProvider>
+          <Divider color='white' />
           <Button variant="contained" color="primary">Experiencies</Button>   
           <Button variant="contained" color="secondary">Formations</Button>   
           <Button variant="contained" color="warning">Skills</Button>   
@@ -273,43 +335,25 @@ const Head = () => {
         <p>{presentation}</p>  
       </Grid>
 
-      <Grid container xs={12} sm={7} md={8} lg={9} xl={10} marginBottom={0.5}  sx={{ borderRadius : 0, bgcolor:'error.dark' }} padding={1}>
-        <Grid item xs={12} sm={12} md={5} lg={5} xl={4} sx={{ borderRadius : 0, bgcolor:'darkcyan' }}>
+      <Grid container xs={12} sm={7} md={8} lg={9} xl={10} marginBottom={0}  sx={{ borderRadius : 0, bgcolor:'#001e3c' }} padding={0}>
+        <Grid item xs={12} sm={12} md={12} lg={5} xl={4} sx={{ borderRadius : 0, bgcolor:'darkcyan' }}>
           <ThemeProvider theme={theme}>
-            <Typography variant="h5" gutterBottom>
-              OSISoft PI Admin & Developer
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              Data Scientist (Python)
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              Full Stack Developer (Python-React)
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              Front-End Developer (React JS - Redux)
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              BackEnd Developer (Python Flask Restful)
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              AI Programming (Pytorch)
+            <Typography variant="h3" gutterBottom>
+              Career
             </Typography>
           </ThemeProvider>
+          <Accordion />
           <Button variant="contained" color="secondary">Download Resume</Button>
-        </Grid>        
-        <Grid item xs={12} sm={12} md={7} lg={7} xl={8} sx={{ borderRadius : 0, bgcolor:'primary.dark' }}>
-          <h2>Hello</h2>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={7} xl={8} sx={{ borderRadius : 0, bgcolor:'secondary.dark' }}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h3" gutterBottom>
+              Formations
+            </Typography>
+          </ThemeProvider>
         </Grid>
       </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'darkcyan' }} padding={1}>
-        <Stack direction='row' spacing={3} centered>
-          <Button variant="contained" color="secondary">Experiencies</Button>   
-          <Button variant="contained" color="secondary">Formations</Button>   
-          <Button variant="contained" color="secondary">Skills</Button>   
-          <Button variant="contained" color="secondary">Interest</Button>   
-          <Button variant="contained" color="secondary">Download Resume</Button>   
-        </Stack>
-      </Grid>
+
     </Grid>
   );
 }
