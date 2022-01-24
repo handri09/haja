@@ -59,9 +59,6 @@ import {
 
 import { Routes, Route, useParams } from 'react-router-dom'
 
-import Head from './Home'
-
-
 let theme = createTheme({
   typography: {
     h2: {
@@ -171,7 +168,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-export default function MiniDrawer() {
+function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -273,7 +270,7 @@ export default function MiniDrawer() {
   );
 }
 
-const Headi = () => {
+export default function Head(){
   return (      
     <Grid container spacing={1}>
       <Grid item xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor: '#001e3c' }} padding={1}>

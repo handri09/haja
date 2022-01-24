@@ -1,15 +1,14 @@
 import './App.css';
 import React, { Component, Fragment } from 'react'
-//import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
 import LoadingBar from 'react-redux-loading'
 import { styled } from '@mui/material/styles'
 import { 
   Container, Box, Grid, Paper, Avatar, Divider, Stack, Chip
   } from '@mui/material'
 import NavTabs from './components/muis/NavTabs'
-
 import { Routes, Route, useParams } from 'react-router-dom'
 import MiniDrawer from './components/muis/MiniDrawer'
+import Home from './components/muis/Home'
 
 class App extends Component {
   render () {
@@ -18,8 +17,8 @@ class App extends Component {
         <NavTabs />
         <MiniDrawer />
         <Routes>
-          <Route path='/my-resume/head' element={<Head />} />  
-          <Route path='/my-resume/part' element={<Part />} />  
+          <Route path='/haja' element={<Home />} />  
+          <Route path='/haja/part' element={<Part />} />  
         </Routes>
       </Container>
     );
