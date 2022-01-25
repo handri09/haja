@@ -2,11 +2,10 @@ import './App.css';
 import React, { Component, Fragment } from 'react'
 import LoadingBar from 'react-redux-loading'
 import { styled } from '@mui/material/styles'
-import { 
-  Container, Box, Grid, Paper, Avatar, Divider, Stack, Chip
+import { Container, Box, Grid, Paper, Avatar, Divider, Stack, Chip
   } from '@mui/material'
-import NavTabs from './components/muis/NavTabs'
 import { Routes, Route, useParams } from 'react-router-dom'
+import NavTabs from './components/muis/NavTabs'
 import MiniDrawer from './components/muis/MiniDrawer'
 import Home from './components/muis/Home'
 
@@ -14,12 +13,8 @@ class App extends Component {
   render () {
     return (
       <Container maxWidth='xxl' sx={{ bgcolor: 'white', height:'50%', textAlign: 'center', color:'white' }} >
-        <NavTabs />
+        <Box sx={{height:'60px'}} />
         <MiniDrawer />
-        <Routes>
-          <Route path='/haja' element={<Home />} />  
-          <Route path='/haja/part' element={<Part />} />  
-        </Routes>
       </Container>
     );
   }

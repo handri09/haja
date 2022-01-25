@@ -144,7 +144,7 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-
+!!
       <Divider color='white'/>
 
       <Accordion disabled sx={{ bgcolor:'#001e3c', color: 'white' }}>

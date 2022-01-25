@@ -19,8 +19,6 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom'
 import { createSvgIcon } from '@mui/material/utils';
-
-
 import ContactsIcon from '@mui/icons-material/Contacts';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -44,23 +42,15 @@ import NoteIcon from '@mui/icons-material/Note';
 import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 
-import {
-  createTheme,
-  responsiveFontSizes,
-  ThemeProvider,
-} from '@mui/material/styles';
+import { createTheme, responsiveFontSizes, ThemeProvider,
+  } from '@mui/material/styles';
+import { Container, Grid, Paper, Avatar, Stack, Chip, Button
+  } from '@mui/material'
+import { Routes, Route, useParams } from 'react-router-dom'
 
 import Header from '../header/Head'
 import Projects from '../Projects'
-
-import { 
-  Container, Grid, Paper, Avatar, Stack, Chip, Button
-  } from '@mui/material'
-
-import { Routes, Route, useParams } from 'react-router-dom'
-
 import Head from './Home'
-
 
 let theme = createTheme({
   typography: {
@@ -174,6 +164,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [title, setTitle] = React.useState('Portfolio')
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -182,7 +173,6 @@ export default function MiniDrawer() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
   const active = 'nothing at all'
 
   return (
@@ -200,10 +190,10 @@ export default function MiniDrawer() {
               ...(open && { display: 'none' }),
             }}
           >
-            <MenuIcon />
+          <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+            {title}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -218,10 +208,7 @@ export default function MiniDrawer() {
 
         <List sx={{ bgcolor:'#071a2f', color:'white' }}>
           {['Home', 'Resume', 'Projects', 'Contact', 'Skills', 'Certificate', 'Formations' ].map((text, index) => (
-            <ListItem button component={Link} to={'/haja/'+text} onClick={() => {
-              active = text;
-              console.log(active)
-            }} key={index} >
+            <ListItem button component={Link} to={'/haja/'+text} onClick={() => { setTitle(text) }} key={index} >
               <ListItemIcon key={index} >
                 { text === 'Skills' && <HomeIcon sx={{ fontSize: 30, color:'white'  }} />}
                 { text === 'Home' && <HomeOutlinedIcon sx={{ fontSize: 30, color:'white' }} />}
@@ -240,9 +227,7 @@ export default function MiniDrawer() {
 
         <List sx={{ bgcolor:'white', color:'#001e3c' }}>
           {['linkedin', 'github', 'instagram', 'facebook', 'youtube', 'twitter', 'whatsapp', 'stackOverflow' ].map((text, index) => (
-            <ListItem button key={index} component={Link} to={'/haja/'+"Home"} onClick={() => {
-              console.log(active)
-            }} >
+            <ListItem button key={index} component={Link} to={'/haja/'+"Home"} onClick={() => { setTitle(text) }} >
               <ListItemIcon key={index}>
                 { text === 'linkedin' && <LinkedInIcon sx={{ fontSize: 30, color:'primary.dark'  }} />}
                 { text === 'github' && <GitHubIcon sx={{ fontSize: 30, color:'black' }} />}
@@ -262,13 +247,13 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p:0.7, bgcolor: 'white', marginTop:'1.5%'  }}>
         <Routes>
+          <Route path='/haja' element={<Head />} />
           <Route path='/haja/Home' element={<Head />} />
           <Route path='/haja/Projects' element={<Projects />} />  
           <Route path='/haja/Resume' element={<Part />} />  
           <Route path='/haja/Contact' element={<Header />} /> 
         </Routes>
       </Box>
-
     </Box>
   );
 }

@@ -19,8 +19,6 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom'
 import { createSvgIcon } from '@mui/material/utils';
-
-
 import ContactsIcon from '@mui/icons-material/Contacts';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -30,33 +28,21 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
-
 // Import Data
 import { presentation } from '../data/data'
 import Accordion from './accordion'
 import Formations from './formations_acc'
 import Body from './body'
-
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import HomeWorkOutlinedIcon from '@mui/icons-material/HomeWorkOutlined';
 import NoteOutlinedIcon from '@mui/icons-material/NoteOutlined';
 import NoteIcon from '@mui/icons-material/Note';
 import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
-
-import {
-  createTheme,
-  responsiveFontSizes,
-  ThemeProvider,
-} from '@mui/material/styles';
-
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
 import Header from '../header/Head'
 import Projects from '../Projects'
-
-import { 
-  Container, Grid, Paper, Avatar, Stack, Chip, Button
-  } from '@mui/material'
-
+import { Container, Grid, Paper, Avatar, Stack, Chip, Button } from '@mui/material'
 import { Routes, Route, useParams } from 'react-router-dom'
 
 let theme = createTheme({
@@ -211,6 +197,7 @@ function MiniDrawer() {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
+        
         <Divider />
 
         <List sx={{ bgcolor:'#071a2f', color:'white' }}>
