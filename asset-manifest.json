@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/haja/static/css/main.59060907.chunk.css",
-    "main.js": "/haja/static/js/main.9b3f0052.chunk.js",
-    "main.js.map": "/haja/static/js/main.9b3f0052.chunk.js.map",
+    "main.js": "/haja/static/js/main.35386166.chunk.js",
+    "main.js.map": "/haja/static/js/main.35386166.chunk.js.map",
     "runtime-main.js": "/haja/static/js/runtime-main.0325c7ef.js",
     "runtime-main.js.map": "/haja/static/js/runtime-main.0325c7ef.js.map",
     "static/css/2.3f943bf7.chunk.css": "/haja/static/css/2.3f943bf7.chunk.css",
-    "static/js/2.962cb682.chunk.js": "/haja/static/js/2.962cb682.chunk.js",
-    "static/js/2.962cb682.chunk.js.map": "/haja/static/js/2.962cb682.chunk.js.map",
+    "static/js/2.312bd96b.chunk.js": "/haja/static/js/2.312bd96b.chunk.js",
+    "static/js/2.312bd96b.chunk.js.map": "/haja/static/js/2.312bd96b.chunk.js.map",
     "static/js/3.39781194.chunk.js": "/haja/static/js/3.39781194.chunk.js",
     "static/js/3.39781194.chunk.js.map": "/haja/static/js/3.39781194.chunk.js.map",
     "index.html": "/haja/index.html",
     "static/css/2.3f943bf7.chunk.css.map": "/haja/static/css/2.3f943bf7.chunk.css.map",
     "static/css/main.59060907.chunk.css.map": "/haja/static/css/main.59060907.chunk.css.map",
-    "static/js/2.962cb682.chunk.js.LICENSE.txt": "/haja/static/js/2.962cb682.chunk.js.LICENSE.txt",
+    "static/js/2.312bd96b.chunk.js.LICENSE.txt": "/haja/static/js/2.312bd96b.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/haja/static/media/outline-icons.ddae9b1b.woff",
     "static/media/index.css": "/haja/static/media/cormorant-latin-700italic.ac30d170.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.0325c7ef.js",
     "static/css/2.3f943bf7.chunk.css",
-    "static/js/2.962cb682.chunk.js",
+    "static/js/2.312bd96b.chunk.js",
     "static/css/main.59060907.chunk.css",
-    "static/js/main.9b3f0052.chunk.js"
+    "static/js/main.35386166.chunk.js"
   ]
 }
