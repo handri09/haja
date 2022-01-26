@@ -15,14 +15,90 @@ export default function SimpleAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Algorithms and Data Structures</Typography>
+          <Typography>REACT & REDUX</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            React Component State, React Router, Environment, React Lifecycle, 
+            React Design Patterns, React Styling, React Native,
+            Redux-Thunk, Redux Store API, Redux Design Patterns, 
+            JavaScript Composition, Idiomatic Redux, Redux Middleware,
+            Redux Actions, Redux Reducers, Redux Stores,
+            React-Redux Bindings, Redux Integration, JSX,
+            JavaScript Functions, Asynchronous Redux
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Divider color='white'/>
+
+      <Accordion sx={{ bgcolor: '#001e3c', color: 'white' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>JAVASCRIPT</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            JavaScript ES6, JavaScript Promises, Javascript OOP, 
+            API Requests, JavaScript JEST, Cypress
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Divider color='white'/>
+
+      <Accordion sx={{ bgcolor: '#001e3c', color: 'white' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>FRONT-END & WEB DEVELOPMENT</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Flexbox, CSS, HTML, Material UI
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Divider color='white'/>
+
+      <Accordion sx={{ bgcolor: '#001e3c', color: 'white' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Software Development Process</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            GIT & GITHUB, GITFLOW
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Divider color='white'/>
+      <Accordion sx={{ bgcolor: '#001e3c', color: 'white' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Computer Science & Programming</Typography>
         </AccordionSummary>
 
         <AccordionDetails>
           <Typography>
-            For algorithms skills, I know Dynamic Programming, .... 
+            Iterators, UNIX Shell, User Input Handling
+            <br />
+            Control Flow, Variable Scope, DocStrings
             <br/>
-            For data structures, I master all basic like list(array), set, dictionary...
+            Algorithms & Data Structures 
+            <br />
+            App Developement: Application State, Management
+            <br />
+            Code debugging
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -39,7 +115,11 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Graduated from University of Antananarivo, License Es Sciense in Telecommunication in 2015.
+            SQL: Subqueries, Aggregations, Queries, Window Functions, JOINs
+            <br/>
+            PYTHON: NumPy, Anaconda, Pandas, Python Data Structures, Pytorch
+            <br/>
+            Software Development Process: GIT & GITHUB
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -52,104 +132,15 @@ export default function SimpleAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Front-End</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lately, having learned React JS and Python Flask RestFul API. Graduated from Udacity in React nanodegree.
-            I use my python skills from my graduation of Data Science with Python to learn Flask RestFul API.
-            Now I can say I am good at both.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Divider color='white'/>
-
-      <Accordion sx={{ bgcolor: '#001e3c', color: 'white' }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>Back-End</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lately, having learned React JS and Python Flask RestFul API. Graduated from Udacity in React nanodegree.
-            I use my python skills from my graduation of Data Science with Python to learn Flask RestFul API.
-            Now I can say I am good at both.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Divider color='white'/>
-
-      <Accordion sx={{ bgcolor: '#001e3c', color: 'white' }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>Mobile</Typography>
+          <Typography>Backend Flask</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
             BackEnd Developer (Python Flask Restful)
-            Lately, having learned React JS and Python Flask RestFul API. Graduated from Udacity in React nanodegree.
-            I use my python skills from my graduation of Data Science with Python to learn Flask RestFul API.
-            Now I can say I am good at both.
+            <br />
+            Graduated from Udacity in Data Science, I used my python skills to learn Flask RestFul API.
           </Typography>
         </AccordionDetails>
-      </Accordion>
-
-      <Divider color='white'/>
-
-      <Accordion sx={{ bgcolor: '#001e3c', color: 'white' }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>Data Engineer</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lately, having learned React JS and Python Flask RestFul API. Graduated from Udacity in React nanodegree.
-            I use my python skills from my graduation of Data Science with Python to learn Flask RestFul API.
-            Now I can say I am good at both.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Divider color='white'/>
-
-      <Accordion sx={{ bgcolor: '#001e3c', color: 'white' }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>Artificiel Intelligent</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lately, having learned React JS and Python Flask RestFul API. Graduated from Udacity in React nanodegree.
-            I use my python skills from my graduation of Data Science with Python to learn Flask RestFul API.
-            Now I can say I am good at both.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Divider color='white'/>
-
-      <Accordion disabled sx={{ bgcolor:'#001e3c', color: 'white' }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography>Control System Specialist</Typography>
-        </AccordionSummary>
       </Accordion>
     </div>
   );

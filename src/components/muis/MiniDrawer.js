@@ -269,16 +269,16 @@ const Headi = () => {
         </ThemeProvider>
       </Grid>
 
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
+      <Grid item xs={4} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
         <Stack direction='row' divider={<Divider orientation="vertical" flexItem color='white'/>} spacing={2} justifyContent='center'>
           <ThemeProvider theme={themee}>
             <Typography variant="p" gutterBottom>
-              OSISoft PI System Administrator & Developer
+              OSISoft PI System Administrator
             </Typography>
           </ThemeProvider>   
           <ThemeProvider theme={themee}>
             <Typography variant="p" gutterBottom>
-              Data Scientist & Full Stack Developer (Python-React)
+              React Developer
             </Typography>
           </ThemeProvider> 
         </Stack>       
@@ -335,28 +335,22 @@ const Headi = () => {
 const Part = () => {
   return (
     <Grid container spacing={0}>
-      <Grid item xs={12} sx={{ borderRadius : 0, bgcolor: 'darkcyan' }} marginTop={0}>
-        <Grid container spacing={0}>
-          <Grid item xs={4} sx={{ borderRadius : 0, bgcolor: 'error.dark', height: 100 }} marginTop={0}>
-            <h1>Part1</h1>
-          </Grid>
-          <Grid item xs={8} sx={{ borderRadius : 0, bgcolor: 'success.dark' }} marginTop={0}>  
-            <Grid item xs={12} sx={{ borderRadius : 0, bgcolor: 'white', color:'blue', height: '50%' }} marginTop={0}>
-              <h2>Part21</h2>
-            </Grid>
-            <Grid item xs={12} sx={{ borderRadius : 0, bgcolor: 'primary.dark', height: '50%', textAlign: 'center' }} marginTop={0}>
-              <h2>Part22</h2>
-            </Grid>
-          </Grid>
-        </Grid>
+      <Grid item xs={12} sx={{ borderRadius : 0, bgcolor: 'primary.dark' , height:'80%'}} >
+        <Avatar
+          alt="Haja Niaina"
+          src='./certificates/CV1.jpg'
+          sx={{  width: '100%', height:'100%' }}
+          variant="rounded" //square
+          /> 
       </Grid>
-
-      <Grid item xs={4} sx={{ borderRadius : 0, bgcolor: 'darkcyan' }} marginTop={0}>
-        <h1>Part1</h1>
-      </Grid>
-      <Grid item xs={8} sx={{ borderRadius : 0, bgcolor: 'darkcyan' }} marginTop={0}>
-        <h1>Part2</h1>
-      </Grid>
+      <Grid item xs={12} sx={{ borderRadius : 0, bgcolor: 'primary.dark' , height:'80%'}} >
+        <Avatar
+          alt="Haja Niaina"
+          src='./certificates/CV2.jpg'
+          sx={{  width: '100%', height:'100%' }}
+          variant="rounded" //square
+          /> 
+      </Grid> 
     </Grid>
   );
 }

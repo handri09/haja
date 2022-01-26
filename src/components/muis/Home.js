@@ -268,19 +268,19 @@ export default function Head(){
         </ThemeProvider>
       </Grid>
 
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
-        <Stack direction='row' divider={<Divider orientation="vertical" flexItem color='white'/>} spacing={2} justifyContent='center'>
-          <ThemeProvider theme={themee}>
-            <Typography variant="p" gutterBottom>
-              OSISoft PI System Administrator & Developer
-            </Typography>
-          </ThemeProvider>   
-          <ThemeProvider theme={themee}>
-            <Typography variant="p" gutterBottom>
-              Data Scientist & Full Stack Developer (Python-React)
-            </Typography>
-          </ThemeProvider> 
-        </Stack>       
+      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1}>      
+        <ThemeProvider theme={themee}>
+          <Typography variant="p" gutterBottom>
+            OSISoft PI System Administrator
+          </Typography>
+        </ThemeProvider> 
+      </Grid>
+      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1}>      
+        <ThemeProvider theme={themee}>
+          <Typography variant="p" gutterBottom>
+            React Developer
+          </Typography>
+        </ThemeProvider>       
       </Grid>
 
       <Grid item xs={12} sm={5} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
@@ -291,6 +291,19 @@ export default function Head(){
           variant="rounded" //square
           />  
         <Stack direction='column' spacing={0}> 
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h5" gutterBottom>
+              +261 34 27 536 51
+            </Typography>
+          </ThemeProvider> 
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h5" gutterBottom>
+              hajaniaina.andri@gmail.com
+            </Typography>
+          </ThemeProvider> 
+          <Divider color='white' />
           <ThemeProvider theme={themee}>
             <Typography variant="h5" gutterBottom>
               31 years old
@@ -299,15 +312,9 @@ export default function Head(){
           <Divider color='white' />
           <ThemeProvider theme={themee}>
             <Typography variant="h5" gutterBottom>
-              Toamasina, Madagascar
+              Toamasina, 501, Madagascar
             </Typography>
           </ThemeProvider>  
-          <Divider color='white' />
-          <ThemeProvider theme={themee}>
-            <Typography variant="h6" gutterBottom>
-              Married
-            </Typography>
-          </ThemeProvider> 
           <Divider color='white' />
           <ThemeProvider theme={themee}>
             <Typography variant="h6" gutterBottom>
