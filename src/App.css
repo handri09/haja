@@ -1,3 +1,15 @@
+.styles_basic__2j2qA {
+    background-color: rgb(245, 252, 254);
+    box-shadow: rgba(17, 22, 26, 0.16) 0px 4px 8px 0px, rgba(17, 22, 26, 0.08) 0px 4px 8px 0px, rgba(17, 22, 26, 0.04) 0px 8px 16px 0px;
+    border-radius: 0.25rem;
+}
+.styles_basic__1 {
+    background-color: #001e3c;
+    box-shadow: rgba(17, 22, 26, 0.16) 0px 4px 8px 0px, rgba(17, 22, 26, 0.08) 0px 4px 8px 0px, rgba(17, 22, 26, 0.04) 0px 8px 16px 0px;
+    border-radius: 0.25rem;
+    margin: 5px;
+}
+
 .Container {
   text-align: center;
   background-color: cyan;

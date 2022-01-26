@@ -260,6 +260,7 @@ function MiniDrawer() {
 export default function Head(){
   return (      
     <Grid container spacing={1}>
+
       <Grid item xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor: '#001e3c' }} padding={1}>
         <ThemeProvider theme={theme}>
           <Typography variant="h4" gutterBottom>
@@ -268,17 +269,18 @@ export default function Head(){
         </ThemeProvider>
       </Grid>
 
-      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1}>      
-        <ThemeProvider theme={themee}>
-          <Typography variant="p" gutterBottom>
+      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1} marginBottom={0.5} >      
+        <ThemeProvider theme={theme}>
+          <Typography variant="h4" gutterBottom>
             OSISoft PI System Administrator
           </Typography>
         </ThemeProvider> 
       </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1}>      
-        <ThemeProvider theme={themee}>
-          <Typography variant="p" gutterBottom>
-            React Developer
+
+      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1} marginBottom={0.5} >      
+        <ThemeProvider theme={theme}>
+          <Typography variant="h4" gutterBottom>
+            Jr. React Developer
           </Typography>
         </ThemeProvider>       
       </Grid>
@@ -299,7 +301,7 @@ export default function Head(){
           </ThemeProvider> 
           <Divider color='white' />
           <ThemeProvider theme={themee}>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h6" gutterBottom>
               hajaniaina.andri@gmail.com
             </Typography>
           </ThemeProvider> 
@@ -321,12 +323,9 @@ export default function Head(){
               Open to opportunities
             </Typography>
           </ThemeProvider>
-          <Divider color='white' />
-          <Button variant="contained" color="primary">Experiencies</Button>   
-          <Button variant="contained" color="secondary">Formations</Button>   
-          <Button variant="contained" color="warning">Skills</Button>   
-          <Button variant="contained" color="success">Interest</Button>   
-          <Button variant="contained" color="error">Download Resume</Button>   
+          <Button variant="contained" color="success"
+            onClick={() => console.log('Download CV')}
+            >Download Resume</Button>   
         </Stack> 
         <p>{presentation}</p>  
       </Grid>

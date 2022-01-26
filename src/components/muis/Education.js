@@ -15,13 +15,12 @@ export default function SimpleAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>React Developer Certificate (Aug 2021)</Typography>
+          <Typography>React Developer Certificate (Udacity)</Typography>
         </AccordionSummary>
 
         <AccordionDetails>
           <Typography>
-            Graduated as "React Developer" by Udacity, deliver August 2021. 
-            ID: <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank"> DDKJTMUA</a>
+            Having successfully completed the Nanodegree Program <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank">React Developer's</a> Udacity, delivered in October 2021.
             <img src='./certificates/React.PNG' height={'100%'} width={'100%'}/>
           </Typography>
         </AccordionDetails>
@@ -35,11 +34,11 @@ export default function SimpleAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Data Science Certificate (Jan 2021)</Typography>
+          <Typography>Data Science Certificate (Udacity)</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Graduated as "Data Scientist" by Udacity, deliver January 2021.
+            Having successfully completed the <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank">Data Scientist</a> Udacity Nanodegree Program, delivered in January 2021.
             ID:<a href='https://confirm.udacity.com/3LJ5GUKD' target="_blank"> 3LJ5GUKD</a>
             <img src='./certificates/DS.PNG' height={'100%'} width={'100%'}/>
           </Typography>
@@ -54,7 +53,7 @@ export default function SimpleAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Electrical Engineering Degree (2015)</Typography>
+          <Typography>Electrical Engineering Degree</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -72,7 +71,7 @@ export default function SimpleAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Telecommunication Degree (2014)</Typography>
+          <Typography>Telecommunication Degree</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

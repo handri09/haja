@@ -42,7 +42,7 @@ export default function SimpleAccordion() {
         <AccordionDetails>
           <Typography>
             JavaScript ES6, JavaScript Promises, Javascript OOP, 
-            API Requests, JavaScript JEST, Cypress
+            API Requests, JEST, Cypress
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -74,7 +74,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            GIT & GITHUB, GITFLOW
+            GIT & GITHUB
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -132,11 +132,28 @@ export default function SimpleAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Backend Flask</Typography>
+          <Typography>DATABASE</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            BackEnd Developer (Python Flask Restful)
+            SQL, SQLite & Postgresql
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Divider color='white'/>
+
+      <Accordion sx={{ bgcolor: '#001e3c', color: 'white' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon sx={{ color:'white' }}/>}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography>Backend</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            I used Python as BackEnd (Flask Restful)
             <br />
             Graduated from Udacity in Data Science, I used my python skills to learn Flask RestFul API.
           </Typography>

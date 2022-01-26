@@ -41,6 +41,7 @@ import NoteOutlinedIcon from '@mui/icons-material/NoteOutlined';
 import NoteIcon from '@mui/icons-material/Note';
 import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
 import { createTheme, responsiveFontSizes, ThemeProvider,
   } from '@mui/material/styles';
@@ -165,6 +166,9 @@ export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [title, setTitle] = React.useState('Portfolio')
+  const [home, setHome] = React.useState(false)
+  const [resume, setResume] = React.useState(false)
+  const [projects, setProjects] = React.useState(false)
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -207,16 +211,18 @@ export default function MiniDrawer() {
         <Divider />
 
         <List sx={{ bgcolor:'#071a2f', color:'white' }}>
-          {['Home', 'Resume', 'Projects', 'Contact', 'Skills', 'Certificate', 'Formations' ].map((text, index) => (
-            <ListItem button component={Link} to={'/haja/'+text} onClick={() => { setTitle(text) }} key={index} >
-              <ListItemIcon key={index} >
-                { text === 'Skills' && <HomeIcon sx={{ fontSize: 30, color:'white'  }} />}
-                { text === 'Home' && <HomeOutlinedIcon sx={{ fontSize: 30, color:'white' }} />}
-                { text === 'Resume' && <NoteOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
-                { text === 'Projects' && <AccountTreeOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
-                { text === 'Contact' && <ContactPhoneOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
+          {['Home', 'Resume', 'Projects', 'Certificate'].map((text, index) => (
+            <ListItem button component={Link} to={'/haja/'+text} onClick={() => { 
+              setTitle(text)
+              if (text === 'Home') { setHome(true) } else { setHome(false)}
+              if (text === 'Resume') { setResume(true) } else { setResume(false)}
+              if (text === 'Projects') { setProjects(true) } else { setProjects(false)}
+            }} key={index} >
+              <ListItemIcon key={index+1} >
+                { text === 'Home' && ( !home ? (<HomeOutlinedIcon sx={{ fontSize: 30, color:'white' }} />) : (<HomeIcon sx={{ fontSize: 30, color:'white'  }} />))}
+                { text === 'Resume' && ( !resume ? (<NoteOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />):(<NoteIcon color='primary' sx={{ fontSize: 30, color:'white' }} />))}
+                { text === 'Projects' && ( !projects ? (<AccountTreeOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />):(<AccountTreeIcon color='primary' sx={{ fontSize: 30, color:'white' }} />))}
                 { text === 'Certificate' && <AccountTreeOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
-                { text === 'Formations' && <ContactPhoneOutlinedIcon color='primary' sx={{ fontSize: 30, color:'white' }} />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
@@ -228,7 +234,7 @@ export default function MiniDrawer() {
         <List sx={{ bgcolor:'white', color:'#001e3c' }}>
           {['linkedin', 'github', 'instagram', 'facebook', 'youtube', 'twitter', 'whatsapp', 'stackOverflow' ].map((text, index) => (
             <ListItem button key={index} component={Link} to={'/haja/'+"Home"} onClick={() => { setTitle(text) }} >
-              <ListItemIcon key={index}>
+              <ListItemIcon key={index+1}>
                 { text === 'linkedin' && <LinkedInIcon sx={{ fontSize: 30, color:'primary.dark'  }} />}
                 { text === 'github' && <GitHubIcon sx={{ fontSize: 30, color:'black' }} />}
                 { text === 'instagram' && <InstagramIcon color='primary' sx={{ fontSize: 30, color:'error.dark' }} />}
@@ -252,83 +258,10 @@ export default function MiniDrawer() {
           <Route path='/haja/Projects' element={<Projects />} />  
           <Route path='/haja/Resume' element={<Part />} />  
           <Route path='/haja/Contact' element={<Header />} /> 
+          <Route path='/haja/Certificate' element={<Block />} /> 
         </Routes>
       </Box>
     </Box>
-  );
-}
-
-const Headi = () => {
-  return (      
-    <Grid container spacing={1}>
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} marginBottom={0.5} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor: '#001e3c' }} padding={1}>
-        <ThemeProvider theme={theme}>
-          <Typography variant="h4" gutterBottom>
-            Hajaniaina ANDRIANAVALONA
-          </Typography>
-        </ThemeProvider>
-      </Grid>
-
-      <Grid item xs={4} sm={12} md={12} lg={12} xl={12} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
-        <Stack direction='row' divider={<Divider orientation="vertical" flexItem color='white'/>} spacing={2} justifyContent='center'>
-          <ThemeProvider theme={themee}>
-            <Typography variant="p" gutterBottom>
-              OSISoft PI System Administrator
-            </Typography>
-          </ThemeProvider>   
-          <ThemeProvider theme={themee}>
-            <Typography variant="p" gutterBottom>
-              React Developer
-            </Typography>
-          </ThemeProvider> 
-        </Stack>       
-      </Grid>
-
-      <Grid item xs={12} sm={5} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
-        <Avatar
-          alt="Haja Niaina"
-          src='./test.png'
-          sx={{  width: '100%', height:'100%' }}
-          variant="rounded" //square
-          />  
-        <Stack direction='column' spacing={0}> 
-          <ThemeProvider theme={themee}>
-            <Typography variant="h5" gutterBottom>
-              31 years old
-            </Typography>
-          </ThemeProvider> 
-          <Divider color='white' />
-          <ThemeProvider theme={themee}>
-            <Typography variant="h5" gutterBottom>
-              Toamasina, Madagascar
-            </Typography>
-          </ThemeProvider>  
-          <Divider color='white' />
-          <ThemeProvider theme={themee}>
-            <Typography variant="h6" gutterBottom>
-              Married
-            </Typography>
-          </ThemeProvider> 
-          <Divider color='white' />
-          <ThemeProvider theme={themee}>
-            <Typography variant="h6" gutterBottom>
-              Open to opportunities
-            </Typography>
-          </ThemeProvider>
-          <Divider color='white' />
-          <Button variant="contained" color="primary">Experiencies</Button>   
-          <Button variant="contained" color="secondary">Formations</Button>   
-          <Button variant="contained" color="warning">Skills</Button>   
-          <Button variant="contained" color="success">Interest</Button>   
-          <Button variant="contained" color="error">Download Resume</Button>   
-        </Stack> 
-        <p>{presentation}</p>  
-      </Grid>
-
-      <Grid item xs={12} sm={7} md={8} lg={9} xl={10} marginBottom={0}  sx={{ borderRadius : 0, bgcolor:'#a01e3c' }} padding={0}>
-        <Body />
-      </Grid>
-    </Grid>
   );
 }
 
@@ -353,4 +286,18 @@ const Part = () => {
       </Grid> 
     </Grid>
   );
+}
+
+const Block = () => {
+  return (
+    <div>
+      <div className='styles_basic__2j2qA'>
+        <h2>TEST</h2>
+      </div>
+      <br />
+      <div className='styles_basic__1'>
+        <h2>TEST</h2>       
+      </div>
+    </div>
+  )
 }
