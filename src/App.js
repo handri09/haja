@@ -20,7 +20,7 @@ function App () {
       <Container>
         <div className='auth'>
           <LoadingBar />
-          <h1>Type 'demo'</h1>
+          <p><em>...Please type <strong style={{fontSize: 20}}>"demo"</strong></em></p>
           <input 
             placeholder='user'
             value={authUser}

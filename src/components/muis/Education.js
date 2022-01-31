@@ -21,7 +21,7 @@ export default function SimpleAccordion() {
         <AccordionDetails>
           <Typography>
             Having successfully completed the Nanodegree Program <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank">React Developer's</a> Udacity, delivered in October 2021.
-            <img src='./certificates/React.PNG' height={'100%'} width={'100%'}/>
+            <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank"><img src='./certificates/React.PNG' height={'100%'} width={'100%'}/></a>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -40,7 +40,7 @@ export default function SimpleAccordion() {
           <Typography>
             Having successfully completed the <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank">Data Scientist</a> Udacity Nanodegree Program, delivered in January 2021.
             ID:<a href='https://confirm.udacity.com/3LJ5GUKD' target="_blank"> 3LJ5GUKD</a>
-            <img src='./certificates/DS.PNG' height={'100%'} width={'100%'}/>
+            <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank"><img src='./certificates/DS.PNG' height={'100%'} width={'100%'}/></a>
           </Typography>
         </AccordionDetails>
       </Accordion>

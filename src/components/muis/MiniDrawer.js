@@ -210,7 +210,7 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List sx={{ bgcolor:'#071a2f', color:'white' }}>
-          {['Home', 'Resume', 'Projects', 'Certificate'].map((text, index) => (
+          {['Home', 'Resume', 'Projects'].map((text, index) => (
             <ListItem button component={Link} to={'/haja/'+text} onClick={() => { 
               setTitle(text)
               if (text === 'Home') { setHome(true) } else { setHome(false)}
@@ -229,11 +229,30 @@ export default function MiniDrawer() {
         </List>
         <Divider />
         <List sx={{ bgcolor:'white', color:'#001e3c' }}>
-          {['linkedin', 'github', 'instagram', 'facebook', 'youtube', 'twitter', 'whatsapp', 'stackOverflow' ].map((text, index) => (
+
+          <a id='test' href='https://www.linkedin.com/in/hajaniaina-andrianavalona-7a4a71188/' target="_blank">
+            <ListItem button key={12} component={Button} to={'https://confirm.udacity.com/DDKJTMUA'} onClick={() => { setTitle('LinkedIn') }} >
+              <ListItemIcon>
+                <LinkedInIcon sx={{ fontSize: 30, color:'primary.dark'  }} />
+              </ListItemIcon>
+              <ListItemText primary={"linkedin"} />
+            </ListItem>      
+          </a> 
+          <a id='test' href='https://github.com/handri09' target="_blank">
+            <ListItem button key={15} component={Button} to={'https://confirm.udacity.com/DDKJTMUA'} onClick={() => { setTitle('LinkedIn') }} >
+              <ListItemIcon>
+                <GitHubIcon sx={{ fontSize: 30, color:'black' }} />
+              </ListItemIcon>
+              <ListItemText primary={"github"} />
+            </ListItem>      
+          </a> 
+
+
+          {[].map((text, index) => (
             <ListItem button key={index} component={Link} to={'/haja/'+"Home"} onClick={() => { setTitle(text) }} >
               <ListItemIcon key={index+1}>
-                { text === 'linkedin' && <LinkedInIcon sx={{ fontSize: 30, color:'primary.dark'  }} />}
-                { text === 'github' && <GitHubIcon sx={{ fontSize: 30, color:'black' }} />}
+                { text === 'linkedin' && <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank"><LinkedInIcon sx={{ fontSize: 30, color:'primary.dark'  }} /></a>}
+                { text === 'github' && <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank"><GitHubIcon sx={{ fontSize: 30, color:'black' }} /></a>}
                 { text === 'instagram' && <InstagramIcon color='primary' sx={{ fontSize: 30, color:'error.dark' }} />}
                 { text === 'facebook' && <FacebookIcon color='primary' sx={{ fontSize: 30, color:'bleu' }} />}
                 { text === 'youtube' && <YouTubeIcon color='primary' sx={{ fontSize: 30, color:'warning.dark' }} />}
@@ -244,7 +263,7 @@ export default function MiniDrawer() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          <p> https://stackoverflow.com/users/edit/17447025 </p>
+          {/*<p> https:stackoverflow.com/users/edit/17447025 </p>*/}
         </List>
 
       </Drawer>
