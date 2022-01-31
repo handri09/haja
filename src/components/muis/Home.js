@@ -269,7 +269,7 @@ export default function Head(){
         </ThemeProvider>
       </Grid>
 
-      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1} marginBottom={0.5} >      
+      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={5.98} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1} marginBottom={0.5} >      
         <ThemeProvider theme={theme}>
           <Typography variant="h4" gutterBottom>
             OSISoft PI System Administrator
@@ -277,7 +277,7 @@ export default function Head(){
         </ThemeProvider> 
       </Grid>
 
-      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={6} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1} marginBottom={0.5} >      
+      <Grid item xs={12} sm={12} md={12} lg={5.98} xl={5.98} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} margin={0.1} marginBottom={0.5} >      
         <ThemeProvider theme={theme}>
           <Typography variant="h4" gutterBottom>
             Jr. React Developer

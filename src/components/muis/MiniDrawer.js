@@ -209,7 +209,6 @@ export default function MiniDrawer() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-
         <List sx={{ bgcolor:'#071a2f', color:'white' }}>
           {['Home', 'Resume', 'Projects', 'Certificate'].map((text, index) => (
             <ListItem button component={Link} to={'/haja/'+text} onClick={() => { 
@@ -228,9 +227,7 @@ export default function MiniDrawer() {
             </ListItem>
           ))}  
         </List>
-
         <Divider />
-
         <List sx={{ bgcolor:'white', color:'#001e3c' }}>
           {['linkedin', 'github', 'instagram', 'facebook', 'youtube', 'twitter', 'whatsapp', 'stackOverflow' ].map((text, index) => (
             <ListItem button key={index} component={Link} to={'/haja/'+"Home"} onClick={() => { setTitle(text) }} >
