@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/haja/static/css/main.80899a4b.chunk.css",
-    "main.js": "/haja/static/js/main.b248cb83.chunk.js",
-    "main.js.map": "/haja/static/js/main.b248cb83.chunk.js.map",
-    "runtime-main.js": "/haja/static/js/runtime-main.751fa1be.js",
-    "runtime-main.js.map": "/haja/static/js/runtime-main.751fa1be.js.map",
+    "main.css": "/haja/static/css/main.4ea02c54.chunk.css",
+    "main.js": "/haja/static/js/main.1af2d767.chunk.js",
+    "main.js.map": "/haja/static/js/main.1af2d767.chunk.js.map",
+    "runtime-main.js": "/haja/static/js/runtime-main.37ad56dd.js",
+    "runtime-main.js.map": "/haja/static/js/runtime-main.37ad56dd.js.map",
     "static/css/2.3f943bf7.chunk.css": "/haja/static/css/2.3f943bf7.chunk.css",
-    "static/js/2.7417cfee.chunk.js": "/haja/static/js/2.7417cfee.chunk.js",
-    "static/js/2.7417cfee.chunk.js.map": "/haja/static/js/2.7417cfee.chunk.js.map",
-    "static/js/3.24779b9d.chunk.js": "/haja/static/js/3.24779b9d.chunk.js",
-    "static/js/3.24779b9d.chunk.js.map": "/haja/static/js/3.24779b9d.chunk.js.map",
+    "static/js/2.45178fed.chunk.js": "/haja/static/js/2.45178fed.chunk.js",
+    "static/js/2.45178fed.chunk.js.map": "/haja/static/js/2.45178fed.chunk.js.map",
+    "static/js/3.da45f4e9.chunk.js": "/haja/static/js/3.da45f4e9.chunk.js",
+    "static/js/3.da45f4e9.chunk.js.map": "/haja/static/js/3.da45f4e9.chunk.js.map",
     "index.html": "/haja/index.html",
     "static/css/2.3f943bf7.chunk.css.map": "/haja/static/css/2.3f943bf7.chunk.css.map",
-    "static/css/main.80899a4b.chunk.css.map": "/haja/static/css/main.80899a4b.chunk.css.map",
-    "static/js/2.7417cfee.chunk.js.LICENSE.txt": "/haja/static/js/2.7417cfee.chunk.js.LICENSE.txt",
+    "static/css/main.4ea02c54.chunk.css.map": "/haja/static/css/main.4ea02c54.chunk.css.map",
+    "static/js/2.45178fed.chunk.js.LICENSE.txt": "/haja/static/js/2.45178fed.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/haja/static/media/outline-icons.ddae9b1b.woff",
     "static/media/index.css": "/haja/static/media/cormorant-latin-700italic.ac30d170.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.751fa1be.js",
+    "static/js/runtime-main.37ad56dd.js",
     "static/css/2.3f943bf7.chunk.css",
-    "static/js/2.7417cfee.chunk.js",
-    "static/css/main.80899a4b.chunk.css",
-    "static/js/main.b248cb83.chunk.js"
+    "static/js/2.45178fed.chunk.js",
+    "static/css/main.4ea02c54.chunk.css",
+    "static/js/main.1af2d767.chunk.js"
   ]
 }
