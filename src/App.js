@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import LoadingBar from 'react-redux-loading'
 import { styled } from '@mui/material/styles'
 import { Container, Box } from '@mui/material'
@@ -14,6 +14,23 @@ const style = {
 }
 
 function App () {
+  let [authUser, setAuthUser] = useState('')
+  if (authUser !== 'demo') {
+    return (
+      <Container>
+        <div className='auth'>
+          <LoadingBar />
+          <h1>Type 'demo'</h1>
+          <input 
+            placeholder='user'
+            value={authUser}
+            onChange={(e) => setAuthUser(e.target.value.toLowerCase())}
+            />
+        </div>
+      </Container>
+    )
+  }
+
   return (
     <Container maxWidth='xxl' sx={style} >
       <Box sx={{height:'60px'}} />
@@ -21,5 +38,4 @@ function App () {
     </Container>
   );
 }
-
 export default App;
