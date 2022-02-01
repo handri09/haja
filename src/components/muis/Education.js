@@ -40,7 +40,7 @@ export default function SimpleAccordion() {
           <Typography>
             Having successfully completed the <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank">Data Scientist</a> Udacity Nanodegree Program, delivered in January 2021.
             ID:<a href='https://confirm.udacity.com/3LJ5GUKD' target="_blank"> 3LJ5GUKD</a>
-            <a href='https://confirm.udacity.com/DDKJTMUA' target="_blank"><img src='./certificates/DS.PNG' height={'100%'} width={'100%'}/></a>
+            <a href='https://confirm.udacity.com/3LJ5GUKD' target="_blank"><img src='./certificates/DS.PNG' height={'100%'} width={'100%'}/></a>
           </Typography>
         </AccordionDetails>
       </Accordion>

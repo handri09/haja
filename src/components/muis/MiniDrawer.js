@@ -210,7 +210,7 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List sx={{ bgcolor:'#071a2f', color:'white' }}>
-          {['Home', 'Resume', 'Projects'].map((text, index) => (
+          {['Home', 'Resume'].map((text, index) => (
             <ListItem button component={Link} to={'/haja/'+text} onClick={() => { 
               setTitle(text)
               if (text === 'Home') { setHome(true) } else { setHome(false)}
@@ -246,8 +246,7 @@ export default function MiniDrawer() {
               <ListItemText primary={"github"} />
             </ListItem>      
           </a> 
-
-
+          
           {[].map((text, index) => (
             <ListItem button key={index} component={Link} to={'/haja/'+"Home"} onClick={() => { setTitle(text) }} >
               <ListItemIcon key={index+1}>
@@ -272,8 +271,7 @@ export default function MiniDrawer() {
           <Route path='/haja' element={<Head />} />
           <Route path='/haja/Home' element={<Head />} />
           <Route path='/haja/Projects' element={<Projects />} />  
-          <Route path='/haja/Resume' element={<Part />} />  
-          <Route path='/haja/Contact' element={<Header />} /> 
+          <Route path='/haja/Resume' element={<Part />} />   
           <Route path='/haja/Certificate' element={<Block />} /> 
         </Routes>
       </Box>
