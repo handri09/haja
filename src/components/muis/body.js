@@ -11,15 +11,15 @@ class Body extends Component {
 	render(){
 		return(
 			<Grid container spacing={0} direction='row'>
-				<Grid item xs={12} sm={12} md={12} lg={6} xl={3} sx={{ bgcolor:'error.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
+				<Grid item xs={12} sm={12} md={12} lg={6} xl={4} sx={{ bgcolor:'error.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
 					<h1>Education</h1>
 					<Degrees />
 				</Grid>
-				<Grid item xs={12} sm={12} md={12} lg={6} xl={3} sx={{ bgcolor:'secondary.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
+				<Grid item xs={12} sm={12} md={12} lg={6} xl={4} sx={{ bgcolor:'secondary.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
 					<h1>Skills</h1>
 					<Skills />
 				</Grid>
-				<Grid item xs={12} sm={12} md={12} lg={6} xl={3} sx={{ bgcolor:'warning.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
+				<Grid item xs={12} sm={12} md={12} lg={6} xl={4} sx={{ bgcolor:'warning.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
 					<h1>Experience</h1>
 					<Experiences />
 				</Grid>
