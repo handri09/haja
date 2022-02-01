@@ -76,7 +76,7 @@ export default function SimpleAccordion() {
         <AccordionDetails>
           <Typography>
             Graduated from University of Antananarivo, License Es Sciense in Telecommunication in 2014.
-            <img src='./certificates/telecom.jpg' height={'100%'} width={'100%'}/>
+            <img src='./certificates/Telecom.jpg' height={'100%'} width={'100%'}/>
           </Typography>
         </AccordionDetails>
       </Accordion>

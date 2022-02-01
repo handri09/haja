@@ -258,6 +258,13 @@ function MiniDrawer() {
 }
 
 export default function Head(){
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = `Hajaniaina_CV.pdf`;
+    link.href = "./certificates/CV.pdf";
+    link.click();
+  }
+
   return (      
     <Grid container spacing={1}>
 
@@ -323,8 +330,11 @@ export default function Head(){
               Open to opportunities
             </Typography>
           </ThemeProvider>
-          <Button variant="contained" color="success"
-            onClick={() => console.log('Download CV')}
+          
+          <Button 
+            variant="contained" 
+            color="success"
+            onClick={() => onDownload()}
             >Download Resume</Button>   
         </Stack> 
         <p>{presentation}</p>  
