@@ -23,7 +23,23 @@ export const presentations = [
 	"💞️ I'm looking to collaborate on an Open Source Project.",
 	"📫 Please reach me at hajaniaina.andri@gmail.com.",
 	"📞 +261 34 27 536 51",
+	"🌱 I live in Toamasina, Madagascar, 501",
+	"💞️ I am opened to opportunity."
 ]
+export const skills = [
+	"👋 React JS",
+	"👀 Redux",
+	"👨‍🔧 JavaScript",
+	"🌱 HTML/CSS",
+	"📗 GIT & GITHUB", 
+	"📚 JEST & CYPRESS",
+	"💞️ OSISoft PI System",
+	"📫 PostgreSQL",
+	"📞 Python",
+	"🌱 Restful API",
+	"💞️ AI pytorch"
+]
+
 
 const test = `
 👋 Hi, I'm Haja

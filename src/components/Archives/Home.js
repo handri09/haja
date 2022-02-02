@@ -29,7 +29,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
 // Import Data
-import { presentations, skills } from '../data/data'
+import { presentations } from '../data/data'
 import Accordion from './accordion'
 import Formations from './formations_acc'
 import Body from './body'
@@ -44,11 +44,6 @@ import Header from '../header/Head'
 import Projects from '../Projects'
 import { Container, Grid, Paper, Avatar, Stack, Chip, Button } from '@mui/material'
 import { Routes, Route, useParams } from 'react-router-dom'
-
-
-import Experiences from './Experience'
-import Skills from './Skills'
-import Degrees from './Education'
 
 let theme = createTheme({
   typography: {
@@ -333,30 +328,66 @@ export default function Head(){
           sx={{ bgcolor:'white', padding: 0.5 }}>          
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12} 
             sx={{ bgcolor:'#001e3c' }} className='readMe'>
-            {skills.map((item, index) => (
-              <Grid margin={0.5}>
-                <Button key={index} 
-                  variant="contained" 
-                  color="success"
-                  onClick={() => onDownload()}
-                  >{item}</Button>
-                </Grid>
+            {presentations.map((item, index) => (
+              <Button key={index} margin={1}
+                variant="contained" 
+                color="success"
+                onClick={() => onDownload()}
+                >{item}</Button>
               ))} 
           </Grid>
         </Grid>
-        
-				<Grid item xs={12} sm={12} md={12} lg={6} xl={4} sx={{ bgcolor:'error.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
-					<h1>Education</h1>
-					<Degrees />
-				</Grid>
-				<Grid item xs={12} sm={12} md={12} lg={6} xl={4} sx={{ bgcolor:'secondary.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
-					<h1>Skills</h1>
-					<Skills />
-				</Grid>
-				<Grid item xs={12} sm={12} md={12} lg={6} xl={4} sx={{ bgcolor:'warning.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
-					<h1>Experience</h1>
-					<Experiences />
-				</Grid>
+
+      <Grid item xs={12} sm={5} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
+        <Avatar
+          alt="Haja Niaina"
+          src='./test.png'
+          sx={{  width: '100%', height:'100%' }}
+          variant="rounded" //square
+          />  
+        <Stack direction='column' spacing={0}> 
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h5" gutterBottom>
+              +261 34 27 536 51
+            </Typography>
+          </ThemeProvider> 
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h6" gutterBottom>
+              hajaniaina.andri@gmail.com
+            </Typography>
+          </ThemeProvider> 
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h5" gutterBottom>
+              31 years old
+            </Typography>
+          </ThemeProvider> 
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h5" gutterBottom>
+              Toamasina, 501, Madagascar
+            </Typography>
+          </ThemeProvider>  
+          <Divider color='white' />
+          <ThemeProvider theme={themee}>
+            <Typography variant="h6" gutterBottom>
+              Open to opportunities
+            </Typography>
+          </ThemeProvider>
+          
+          <Button 
+            variant="contained" 
+            color="success"
+            onClick={() => onDownload()}
+            >Download Resume</Button>   
+        </Stack> 
+      </Grid>
+
+      <Grid item xs={12} sm={7} md={8} lg={9} xl={10} marginBottom={0}  sx={{ borderRadius : 0, bgcolor:'#a01e3c' }} padding={0}>
+        <Body />
+      </Grid>
     </Grid>
   );
 }
