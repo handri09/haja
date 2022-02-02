@@ -29,7 +29,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
 // Import Data
-import { presentation } from '../data/data'
+import { presentations } from '../data/data'
 import Accordion from './accordion'
 import Formations from './formations_acc'
 import Body from './body'
@@ -292,6 +292,32 @@ export default function Head(){
         </ThemeProvider>       
       </Grid>
 
+
+        <Grid item container xs={12} sm={5} md={4} lg={3} xl={2} marginBottom={0.5}
+          sx={{ bgcolor:'white', padding: 0.5 }}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} 
+            sx={{ bgcolor:'white' }} className='readMe'>
+            <Avatar
+              alt="Haja Niaina"
+              src='./test.png'
+              sx={{  width: '100%', height:'100%' }}
+              variant="rounded" //square
+              />  
+          </Grid>
+        </Grid>
+
+        <Grid item container xs={12} sm={7} md={8} lg={9} xl={10} marginBottom={0.5}
+          sx={{ bgcolor:'white', padding: 0.5 }}>          
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} 
+            sx={{ bgcolor:'#001e3c' }} className='readMe'>
+            <ul>
+            {presentations.map((item, index) => (
+              <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </Grid>
+        </Grid>
+        
       <Grid item xs={12} sm={5} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
         <Avatar
           alt="Haja Niaina"
@@ -337,7 +363,7 @@ export default function Head(){
             onClick={() => onDownload()}
             >Download Resume</Button>   
         </Stack> 
-        <p>{presentation}</p>  
+        <textarea sx={{ width: '80%', height:'200px'}}>{presentations}</textarea>  
       </Grid>
 
       <Grid item xs={12} sm={7} md={8} lg={9} xl={10} marginBottom={0}  sx={{ borderRadius : 0, bgcolor:'#a01e3c' }} padding={0}>
