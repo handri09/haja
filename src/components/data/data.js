@@ -16,7 +16,7 @@ Mes principaux loisirs sont le football, la musculation et la musique.
 export const presentations = [
 	"👋 Hi, I'm Haja",
 	"👀 I'm interested in React Developer position.",
-	"👨‍🔧 I work for Ambatovy as OSISoft PI Administrator.",
+	"👨‍🔧 I currently work for Ambatovy as OSISoft PI Administrator.",
 	"🌱 I'm currently improving my Developer skills...",
 	"📗 I earned a certificate in ''React Developer'' at Udacity.", 
 	"📚 I earned as well a ''Data Science certificate'' at Udacity",

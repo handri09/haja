@@ -306,7 +306,7 @@ export default function Head(){
           </Grid>
         </Grid>
 
-        <Grid item container xs={12} sm={7} md={8} lg={9} xl={10} marginBottom={0.5}
+        <Grid item container xs={12} sm={3.5} md={4} lg={4.5} xl={5} marginBottom={0.5}
           sx={{ bgcolor:'white', padding: 0.5 }}>          
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12} 
             sx={{ bgcolor:'#001e3c' }} className='readMe'>
@@ -314,10 +314,30 @@ export default function Head(){
             {presentations.map((item, index) => (
               <li key={index}>{item}</li>
               ))}
+              <Button 
+                variant="contained" 
+                color="success"
+                onClick={() => onDownload()}
+                >Download Resume</Button> 
             </ul>
           </Grid>
         </Grid>
         
+
+        <Grid item container xs={12} sm={3.5} md={4} lg={4.5} xl={5} marginBottom={0.5}
+          sx={{ bgcolor:'white', padding: 0.5 }}>          
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} 
+            sx={{ bgcolor:'#001e3c' }} className='readMe'>
+            {presentations.map((item, index) => (
+              <Button key={index} margin={1}
+                variant="contained" 
+                color="success"
+                onClick={() => onDownload()}
+                >{item}</Button>
+              ))} 
+          </Grid>
+        </Grid>
+
       <Grid item xs={12} sm={5} md={4} lg={3} xl={2} sx={{ borderRadius : 0, width: '100%', height: '100%', bgcolor:'#001e3c' }} padding={1}>
         <Avatar
           alt="Haja Niaina"
@@ -363,7 +383,6 @@ export default function Head(){
             onClick={() => onDownload()}
             >Download Resume</Button>   
         </Stack> 
-        <textarea sx={{ width: '80%', height:'200px'}}>{presentations}</textarea>  
       </Grid>
 
       <Grid item xs={12} sm={7} md={8} lg={9} xl={10} marginBottom={0}  sx={{ borderRadius : 0, bgcolor:'#a01e3c' }} padding={0}>

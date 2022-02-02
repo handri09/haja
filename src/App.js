@@ -33,7 +33,7 @@ function App () {
 
   return (
     <Container maxWidth='xxl' sx={style} >
-      <Box sx={{height:'60px'}} />
+      <Box sx={{ height:'60px' }} />
       <MiniDrawer />
     </Container>
   );
