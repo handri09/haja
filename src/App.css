@@ -21,9 +21,17 @@
     margin: 5px;
     text-align: left;
 }
+.blocks {
+  background-color: #FFFFFF;
+  box-shadow: rgba(17, 22, 26, 0.16) 0px 4px 8px 0px, rgba(17, 22, 26, 0.08) 0px 4px 8px 0px, rgba(17, 22, 26, 0.04) 0px 8px 16px 0px;
+  border-radius: 0.25rem;
+  margin: 100px;
+  text-align: center;
+  font-weight: bold;
+}
 .Container {
   text-align: center;
-  background-color: cyan;
+  background-color: rgb(58, 61, 61);
   height: 100%;
   width: 100%;
 }

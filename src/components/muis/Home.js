@@ -45,10 +45,11 @@ import Projects from '../Projects'
 import { Container, Grid, Paper, Avatar, Stack, Chip, Button } from '@mui/material'
 import { Routes, Route, useParams } from 'react-router-dom'
 
-
 import Experiences from './Experience'
 import Skills from './Skills'
 import Degrees from './Education'
+
+import JavascriptIcon from '@mui/icons-material/Javascript';
 
 let theme = createTheme({
   typography: {
@@ -297,66 +298,65 @@ export default function Head(){
         </ThemeProvider>       
       </Grid>
 
+      <Grid item xs={12} sm={12} md={4} lg={3} xl={2} marginBottom={0.5}
+        sx={{ bgcolor:'white', padding: 0.5 }} className='readMe'>
+        <Avatar
+          alt="Haja Niaina"
+          src='./test.png'
+          sx={{  width: '100%', height:'100%' }}
+          variant="rounded" //square
+          />  
+      </Grid>
 
-        <Grid item container xs={12} sm={5} md={4} lg={3} xl={2} marginBottom={0.5}
-          sx={{ bgcolor:'white', padding: 0.5 }}>
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} 
-            sx={{ bgcolor:'white' }} className='readMe'>
-            <Avatar
-              alt="Haja Niaina"
-              src='./test.png'
-              sx={{  width: '100%', height:'100%' }}
-              variant="rounded" //square
-              />  
-          </Grid>
+      <Grid item container xs={12} sm={12} md={4} lg={4.5} xl={5} marginBottom={0.5}
+        sx={{ padding: 0.5 }} className='readMe'>
+        <ul> 
+        {presentations.map((item, index) => (
+          <li key={index}>{item}</li>
+          ))}
+          <Button 
+            variant="contained" 
+            color="success"
+            onClick={() => onDownload()}
+            >Download Resume</Button> 
+        </ul>
+      </Grid>
+
+      <Grid item container xs={12} sm={3.5} md={4} lg={4.5} xl={5} marginBottom={0.5}
+        sx={{ bgcolor:'white', padding: 0.5, color:'blue' }} className='readMe' >  
+
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{textAlign: 'center'}}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
+              Skills
+            </Typography>
+          </ThemeProvider>
         </Grid>
 
-        <Grid item container xs={12} sm={3.5} md={4} lg={4.5} xl={5} marginBottom={0.5}
-          sx={{ bgcolor:'white', padding: 0.5 }}>          
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} 
-            sx={{ bgcolor:'#001e3c' }} className='readMe'>
-            <ul>
-            {presentations.map((item, index) => (
-              <li key={index}>{item}</li>
-              ))}
-              <Button 
-                variant="contained" 
-                color="success"
-                onClick={() => onDownload()}
-                >Download Resume</Button> 
-            </ul>
-          </Grid>
-        </Grid>
+        {skills.map((item, index) => (
+          <Grid item margin={0.5}>
+            <Button key={index} 
+              variant="contained" 
+              color="success"
+              onClick={() => onDownload()}
+              >{item}</Button>
+            </Grid>
+          ))} 
+      </Grid>
         
+      <Grid item xs={12} sm={12} md={12} lg={6} xl={4} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
+        <h1>Education</h1>
+        <Degrees />
+      </Grid>
+      <Grid item xs={12} sm={12} md={12} lg={6} xl={4} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
+        <h1>Skills</h1>
+        <Skills />
+      </Grid>
+      <Grid item xs={12} sm={12} md={12} lg={6} xl={4} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
+        <h1>Experience</h1>
+        <Experiences />
+      </Grid>
 
-        <Grid item container xs={12} sm={3.5} md={4} lg={4.5} xl={5} marginBottom={0.5}
-          sx={{ bgcolor:'white', padding: 0.5 }}>          
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} 
-            sx={{ bgcolor:'#001e3c' }} className='readMe'>
-            {skills.map((item, index) => (
-              <Grid margin={0.5}>
-                <Button key={index} 
-                  variant="contained" 
-                  color="success"
-                  onClick={() => onDownload()}
-                  >{item}</Button>
-                </Grid>
-              ))} 
-          </Grid>
-        </Grid>
-        
-				<Grid item xs={12} sm={12} md={12} lg={6} xl={4} sx={{ bgcolor:'error.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
-					<h1>Education</h1>
-					<Degrees />
-				</Grid>
-				<Grid item xs={12} sm={12} md={12} lg={6} xl={4} sx={{ bgcolor:'secondary.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
-					<h1>Skills</h1>
-					<Skills />
-				</Grid>
-				<Grid item xs={12} sm={12} md={12} lg={6} xl={4} sx={{ bgcolor:'warning.dark'}} padding={1} sx={{ borderRadius: '5px'}}>
-					<h1>Experience</h1>
-					<Experiences />
-				</Grid>
     </Grid>
   );
 }
