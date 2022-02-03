@@ -17,29 +17,62 @@ export const presentations = [
 	"👋 Hi, I'm Haja",
 	"👀 I'm interested in React Developer position.",
 	"👨‍🔧 I currently work for Ambatovy as OSISoft PI Administrator.",
-	"🌱 I'm currently improving my Developer skills...",
+	"🌱 I'm improving my Developer skills...",
 	"📗 I earned a certificate in ''React Developer'' at Udacity.", 
 	"📚 I earned as well a ''Data Science certificate'' at Udacity",
-	"💞️ I'm looking to collaborate on an Open Source Project.",
+	"👨‍🔧 I'm looking to collaborate on an Open Source Project.",
 	"📫 Please reach me at hajaniaina.andri@gmail.com.",
 	"📞 +261 34 27 536 51",
-	"🌱 I live in Toamasina, Madagascar, 501",
-	"💞️ I am opened to opportunity."
+	"🍒 I live in Toamasina, Madagascar, 501",
+	`▶️ Opened to opportunity.`
 ]
 export const skills = [
-	"👋 React JS",
-	"👀 Redux",
-	"👨‍🔧 JavaScript",
-	"🌱 HTML/CSS",
-	"📗 GIT & GITHUB", 
-	"📚 JEST & CYPRESS",
-	"💞️ OSISoft PI System",
-	"📫 PostgreSQL",
-	"📞 Python",
-	"🌱 Restful API",
-	"💞️ AI pytorch"
+	"✅ React JS 🏆",
+	"✅ Redux",
+	"✅ JavaScript",
+	"✅ HTML/CSS",
+	"✅ GIT & GITHUB", 
+	"✅ Web API",
+	"✅ OSISoft PI System",
+	"✅ Python: Numpy & Pandas",
+	"✅ SQL & PostgreSQL",
+	"✅ AI pytorch",
 ]
 
+export const begginer  = [
+	"✔️ Unit testing JEST",
+	"✔️ E2E test CYPRESS", 
+	"✔️ Arrays",
+	"✔️ GIT Branching and Merging",
+	"✔️ GIT Handling Merge Conflicts",
+]
+
+export const toImprove  = [
+	"🔊 Semantic HTML Tags"]
+	/*
+	"📧 CSS Selector",
+	"🔔 CSS Reset",
+	" ► BoxModel & BorderBox",
+	"🎧🎧FlexBox",
+	" ❤️❤️ Responsive Web",
+	"🍉Promises",
+	"🏆DOM Manipulation",
+	"The 'THIS' Keyword", 
+	"HOC and CallBacks",
+	"Prototypal Inheritance & Object Creation",
+	"The 'Class' keyword",
+	"GitFlow: ADD, Commit, Push & Pull",
+	"Tailwind CSS",
+	"Semantic UI",
+	"React Context",
+	"Patterns for Authentication",
+	"S.O.L.I.D."
+]*/
+
+export const profile = `4 years experiences as OSISoft PI System Developer in Ambatovy Company. 
+I used my developer skills to automate some of my routine task. I used to create an UI app for real-time data entry and data monitoring using Python, PostgreSQL, HTML/CSS, JavaScript, PI WEB API and ReactJS)
+I am opened to opportunity, as "React Developer" "OSISoft PI Developer" & "Data Scientist"... 
+`
 
 const test = `
 👋 Hi, I'm Haja

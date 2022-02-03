@@ -29,7 +29,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
 // Import Data
-import { presentations, skills } from '../data/data'
+import { presentations, skills, toImprove, begginer, profile } from '../data/data'
 import Accordion from './accordion'
 import Formations from './formations_acc'
 import Body from './body'
@@ -298,7 +298,7 @@ export default function Head(){
         </ThemeProvider>       
       </Grid>
 
-      <Grid item xs={12} sm={12} md={4} lg={3} xl={2} marginBottom={0.5}
+      <Grid item xs={12} sm={12} md={12} lg={3} xl={2} marginBottom={0.5}
         sx={{ bgcolor:'white', padding: 0.5 }} className='readMe'>
         <Avatar
           alt="Haja Niaina"
@@ -308,21 +308,24 @@ export default function Head(){
           />  
       </Grid>
 
-      <Grid item container xs={12} sm={12} md={4} lg={4.5} xl={5} marginBottom={0.5}
+      <Grid item container xs={12} sm={12} md={8} lg={4.5} xl={5} marginBottom={0.5}
         sx={{ padding: 0.5 }} className='readMe'>
         <ul> 
         {presentations.map((item, index) => (
           <li key={index}>{item}</li>
           ))}
+        </ul>
+        <div textAlign='center'>
+          <p>{profile}</p>
           <Button 
             variant="contained" 
             color="success"
             onClick={() => onDownload()}
             >Download Resume</Button> 
-        </ul>
+        </div>
       </Grid>
 
-      <Grid item container xs={12} sm={3.5} md={4} lg={4.5} xl={5} marginBottom={0.5}
+      <Grid item container xs={12} sm={3.5} md={12} lg={4.5} xl={5} marginBottom={0.5}
         sx={{ bgcolor:'white', padding: 0.5, color:'blue' }} className='readMe' >  
 
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{textAlign: 'center'}}>
@@ -343,7 +346,7 @@ export default function Head(){
             </Grid>
           ))} 
 
-        {skills.map((item, index) => (
+        {begginer.map((item, index) => (
           <Grid item margin={0.5}>
             <Button key={index} 
               variant="contained" 
@@ -353,12 +356,13 @@ export default function Head(){
             </Grid>
           ))} 
 
-         {skills.map((item, index) => (
+         {toImprove.map((item, index) => (
           <Grid item margin={0.5}>
             <Button key={index} 
               variant="contained" 
               color="secondary"
               onClick={() => onDownload()}
+              disabled={true}
               >{item}</Button>
             </Grid>
           ))} 
