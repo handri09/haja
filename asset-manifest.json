@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/haja/static/css/main.c8eacbc2.chunk.css",
-    "main.js": "/haja/static/js/main.afcb7442.chunk.js",
-    "main.js.map": "/haja/static/js/main.afcb7442.chunk.js.map",
+    "main.js": "/haja/static/js/main.c134267a.chunk.js",
+    "main.js.map": "/haja/static/js/main.c134267a.chunk.js.map",
     "runtime-main.js": "/haja/static/js/runtime-main.37ad56dd.js",
     "runtime-main.js.map": "/haja/static/js/runtime-main.37ad56dd.js.map",
     "static/css/2.3f943bf7.chunk.css": "/haja/static/css/2.3f943bf7.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.3f943bf7.chunk.css",
     "static/js/2.0f4a4681.chunk.js",
     "static/css/main.c8eacbc2.chunk.css",
-    "static/js/main.afcb7442.chunk.js"
+    "static/js/main.c134267a.chunk.js"
   ]
 }
