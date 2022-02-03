@@ -342,18 +342,50 @@ export default function Head(){
               >{item}</Button>
             </Grid>
           ))} 
+
+        {skills.map((item, index) => (
+          <Grid item margin={0.5}>
+            <Button key={index} 
+              variant="contained" 
+              color="primary"
+              onClick={() => onDownload()}
+              >{item}</Button>
+            </Grid>
+          ))} 
+
+         {skills.map((item, index) => (
+          <Grid item margin={0.5}>
+            <Button key={index} 
+              variant="contained" 
+              color="secondary"
+              onClick={() => onDownload()}
+              >{item}</Button>
+            </Grid>
+          ))} 
       </Grid>
         
       <Grid item xs={12} sm={12} md={12} lg={6} xl={4} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
-        <h1>Education</h1>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
+              Education
+            </Typography>
+          </ThemeProvider>
         <Degrees />
       </Grid>
       <Grid item xs={12} sm={12} md={12} lg={6} xl={4} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
-        <h1>Skills</h1>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
+              Skills
+            </Typography>
+          </ThemeProvider>
         <Skills />
       </Grid>
       <Grid item xs={12} sm={12} md={12} lg={6} xl={4} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
-        <h1>Experience</h1>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
+              Experiences
+            </Typography>
+          </ThemeProvider>
         <Experiences />
       </Grid>
 
