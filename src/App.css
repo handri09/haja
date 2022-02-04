@@ -1,9 +1,20 @@
+.center {
+  text-align: center;
+}
+.grid {
+  background-color: #001e3c;
+  box-shadow: rgba(17, 22, 26, 0.16) 0px 4px 8px 0px, rgba(17, 22, 26, 0.08) 0px 4px 8px 0px, rgba(17, 22, 26, 0.04) 0px 8px 16px 0px;
+  border-radius: 0.25rem;
+  padding: 0px;
+  color: rgb(245, 252, 254);
+}
+
 .auth {
   background-color: #001e3c;
   color:  white;
   box-shadow: rgba(17, 22, 26, 0.16) 0px 4px 8px 0px, rgba(17, 22, 26, 0.08) 0px 4px 8px 0px, rgba(17, 22, 26, 0.04) 0px 8px 16px 0px;
   border-radius: 0.25rem;
-  heihgt: '100px';
+  height: '100px';
   padding: 5%;
   text-align: center;
   margin-top: 1% ;

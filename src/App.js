@@ -14,7 +14,7 @@ const style = {
 }
 
 function App () {
-  let [authUser, setAuthUser] = useState('')
+  let [authUser, setAuthUser] = useState('demo')
   if (authUser !== 'demo') {
     return (
       <Container>
