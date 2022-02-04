@@ -74,7 +74,7 @@ I used my developer skills to automate some of my routine task. I used to create
 I am opened to opportunity, as "React Developer" "OSISoft PI Developer" & "Data Scientist"... 
 `
 
-const test = `
+export const test = `
 👋 Hi, I'm Haja
 💞️ I have 4 years of experience as OSISoft PI Administrator and Developer. ${'\n\n'}
 In my current role, I use my developer skills and knowledge in developping UI for real-time data entry and data monitoring (using Python, HTML/CSS, JavaScript, PI WEB API and ReactJS).\n

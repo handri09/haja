@@ -29,7 +29,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
 // Import Data
-import { presentations, skills, toImprove, begginer, profile } from '../data/data'
+import { presentations, skills, toImprove, begginer, profile, test } from '../data/data'
 import Accordion from './accordion'
 import Formations from './formations_acc'
 import Body from './body'
@@ -298,8 +298,8 @@ export default function Head(){
         </ThemeProvider>       
       </Grid>
 
-      <Grid item container xs={12} sm={12} md={12} lg={12} xl={12} sx={{ padding: 0.5 }} className='readMe'>
-        <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+      <Grid item container xs={12} sm={12} md={12} lg={12} xl={12} sx={{ padding: 0, bgcolor: "white"  }}>
+        <Grid item xs={12} sm={12} md={4} lg={4} xl={4} className='grid'>
           <Avatar
             alt="Haja Niaina"
             src='./test.png'
@@ -313,66 +313,69 @@ export default function Head(){
             >Download Resume</Button>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={8} lg={8} xl={8} sx={{bgcolor:'#001e3c'}} >
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{bgcolor:'#001e3c'}} >
+        <Grid item xs={12} sm={12} md={8} lg={8} xl={8} sx={{bgcolor:'white'}} className='readMe' padding={10}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{color:'#001e3c'}} marginLeft={2} className='profile'>
+            <h2>👋 Hello! I'm Haja,</h2>
+            <h2>Welcome to my Portfolio</h2>
+            <h2>I'm a React Developer </h2>
+            <h2>From Toamasina, Madagascar.</h2>
+            <p>{profile}</p>
+          {/* 
             <ul> 
             {presentations.map((item, index) => (
               <li key={index}>{item}</li>
               ))}
             </ul>
-          </Grid>
+          */}
 
-          <Grid item container xs={12} sm={12} md={12} lg={12} xl={12}
-            sx={{ bgcolor:'white', padding: 0.5, color:'blue' }} className='readMe' >  
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{textAlign: 'center'}}>
-              <ThemeProvider theme={theme}>
-                <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
-                  Skills
-                </Typography>
-              </ThemeProvider>
+          </Grid>
+        </Grid>
+
+      </Grid>
+
+
+      <Grid item container xs={12} sm={12} md={12} lg={12} xl={12} sx={{ bgcolor:'white', padding: 0.5, color:'blue' }} className='readMe' >  
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{textAlign: 'center'}}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
+              Skills
+            </Typography>
+          </ThemeProvider>
+        </Grid>
+
+        {skills.map((item, index) => (
+          <Grid item margin={0.5}>
+            <Button key={index} 
+              variant="contained" 
+              color="success"
+              onClick={() => onDownload()}
+              >{item}</Button>
             </Grid>
+          ))} 
 
-            {skills.map((item, index) => (
-              <Grid item margin={0.5}>
-                <Button key={index} 
-                  variant="contained" 
-                  color="success"
-                  onClick={() => onDownload()}
-                  >{item}</Button>
-                </Grid>
-              ))} 
+        {begginer.map((item, index) => (
+          <Grid item margin={0.5}>
+            <Button key={index} 
+              variant="contained" 
+              color="primary"
+              onClick={() => onDownload()}
+              >{item}</Button>
+            </Grid>
+          ))} 
 
-            {begginer.map((item, index) => (
-              <Grid item margin={0.5}>
-                <Button key={index} 
-                  variant="contained" 
-                  color="primary"
-                  onClick={() => onDownload()}
-                  >{item}</Button>
-                </Grid>
-              ))} 
+        {toImprove.map((item, index) => (
+          <Grid item margin={0.5}>
+            <Button key={index} 
+              variant="contained" 
+              color="secondary"
+              onClick={() => onDownload()}
+              disabled={true}
+              >{item}</Button>
+            </Grid>
+          ))} 
+      </Grid>
 
-            {toImprove.map((item, index) => (
-              <Grid item margin={0.5}>
-                <Button key={index} 
-                  variant="contained" 
-                  color="secondary"
-                  onClick={() => onDownload()}
-                  disabled={true}
-                  >{item}</Button>
-                </Grid>
-              ))} 
-          </Grid>
-        </Grid>
-
-
-
-        </Grid>
-
-        
-
-
-
+      {/** EDUCATION **/}
       <Grid item xs={12} sm={12} md={6} lg={4} xl={3} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
         <ThemeProvider theme={theme}>
           <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
