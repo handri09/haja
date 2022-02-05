@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/haja/static/css/main.e68e8dbe.chunk.css",
-    "main.js": "/haja/static/js/main.2b48d0f4.chunk.js",
-    "main.js.map": "/haja/static/js/main.2b48d0f4.chunk.js.map",
+    "main.css": "/haja/static/css/main.6ff6556e.chunk.css",
+    "main.js": "/haja/static/js/main.b9e5900a.chunk.js",
+    "main.js.map": "/haja/static/js/main.b9e5900a.chunk.js.map",
     "runtime-main.js": "/haja/static/js/runtime-main.37ad56dd.js",
     "runtime-main.js.map": "/haja/static/js/runtime-main.37ad56dd.js.map",
     "static/css/2.3f943bf7.chunk.css": "/haja/static/css/2.3f943bf7.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.da45f4e9.chunk.js.map": "/haja/static/js/3.da45f4e9.chunk.js.map",
     "index.html": "/haja/index.html",
     "static/css/2.3f943bf7.chunk.css.map": "/haja/static/css/2.3f943bf7.chunk.css.map",
-    "static/css/main.e68e8dbe.chunk.css.map": "/haja/static/css/main.e68e8dbe.chunk.css.map",
+    "static/css/main.6ff6556e.chunk.css.map": "/haja/static/css/main.6ff6556e.chunk.css.map",
     "static/js/2.0f4a4681.chunk.js.LICENSE.txt": "/haja/static/js/2.0f4a4681.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/haja/static/media/outline-icons.ddae9b1b.woff",
     "static/media/index.css": "/haja/static/media/cormorant-latin-700italic.ac30d170.woff2"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.37ad56dd.js",
     "static/css/2.3f943bf7.chunk.css",
     "static/js/2.0f4a4681.chunk.js",
-    "static/css/main.e68e8dbe.chunk.css",
-    "static/js/main.2b48d0f4.chunk.js"
+    "static/css/main.6ff6556e.chunk.css",
+    "static/js/main.b9e5900a.chunk.js"
   ]
 }
