@@ -69,9 +69,10 @@ export const toImprove  = [
 	"S.O.L.I.D."
 ]*/
 
-export const profile = `4 years experiences as OSISoft PI System Developer in Ambatovy Company. 
-I used my developer skills to automate some of my routine task. I used to create an UI app for real-time data entry and data monitoring using Python, PostgreSQL, HTML/CSS, JavaScript, PI WEB API and ReactJS)
-I am opened to opportunity, as "React Developer" "OSISoft PI Developer" & "Data Scientist"... 
+export const profile = `4 years of experiences as OSISoft PI System Developer in Ambatovy Company. 
+I used my developer skills to automate and build an Web Apps to well manage the OSISoft PI System administration.
+I used to create an UI app for real-time data entry and data monitoring using Python, PostgreSQL, HTML/CSS, JavaScript, PI WEB API and ReactJS)
+Please feel free to contact me,  
 `
 
 export const test = `

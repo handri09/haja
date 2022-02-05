@@ -306,20 +306,24 @@ export default function Head(){
             sx={{  width: '100%', height:'100%' }}
             variant="rounded" //square
             />  
-          <Button 
-            variant="contained" 
-            color="success"
-            onClick={() => onDownload()}
-            >Download Resume</Button>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={8} lg={8} xl={8} sx={{bgcolor:'white'}} className='readMe' padding={10}>
+        <Grid item xs={12} sm={12} md={8} lg={8} xl={8} sx={{bgcolor:'white'}} className='readMe' padding={3}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{color:'#001e3c'}} marginLeft={2} className='profile'>
             <h2>👋 Hello! I'm Haja,</h2>
-            <h2>Welcome to my Portfolio</h2>
-            <h2>I'm a React Developer </h2>
+            <h2>I'm a React Developer and an OSISoft PI Developer</h2>
             <h2>From Toamasina, Madagascar.</h2>
             <p>{profile}</p>
+            <p>I am opened to opportunity, as "React Developer", "OSISoft PI Developer" & "Data Scientist".</p>
+            <p>📫 hajaniaina.andri@gmail.com.</p>
+	          <p>📞 +261 34 27 536 51</p>
+            <Grid className='center'>
+              <Button 
+                variant="contained" 
+                color="success"
+                onClick={() => onDownload()}
+                >Resume</Button>
+            </Grid>
           {/* 
             <ul> 
             {presentations.map((item, index) => (
@@ -327,14 +331,12 @@ export default function Head(){
               ))}
             </ul>
           */}
-
           </Grid>
         </Grid>
-
       </Grid>
 
-
-      <Grid item container xs={12} sm={12} md={12} lg={12} xl={12} sx={{ bgcolor:'white', padding: 0.5, color:'blue' }} className='readMe' >  
+      {/* SKILLS */}
+      <Grid item container xs={12} sm={12} md={12} lg={12} xl={12} sx={{ bgcolor:'white', padding: 0.5, color:'blue', marginTop: 1.5, textAlign: 'center' }} className='readMe' >  
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{textAlign: 'center'}}>
           <ThemeProvider theme={theme}>
             <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
@@ -343,15 +345,46 @@ export default function Head(){
           </ThemeProvider>
         </Grid>
 
-        {skills.map((item, index) => (
-          <Grid item margin={0.5}>
-            <Button key={index} 
-              variant="contained" 
-              color="success"
-              onClick={() => onDownload()}
-              >{item}</Button>
-            </Grid>
-          ))} 
+          {begginer.map((item, index) => (
+            <Grid item margin={0.5}>
+              <Button key={index} 
+                variant="contained" 
+                color="primary"
+                onClick={() => onDownload()}
+                >{item}</Button>
+              </Grid>
+            ))} 
+
+          {toImprove.map((item, index) => (
+            <Grid item margin={0.5}>
+              <Button key={index} 
+                variant="contained" 
+                color="secondary"
+                onClick={() => onDownload()}
+                disabled={true}
+                >{item}</Button>
+              </Grid>
+            ))} 
+          {skills.map((item, index) => (
+            <Grid item margin={0.5}>
+              <Button key={index} 
+                variant="contained" 
+                color="success"
+                onClick={() => onDownload()}
+                >{item}</Button>
+              </Grid>
+            ))}
+      </Grid>
+
+      {/* TOOLS */}
+      <Grid item container xs={12} sm={12} md={12} lg={12} xl={12} sx={{ bgcolor:'white', padding: 0.5, color:'blue', marginTop: 1.5 }} className='readMe' >  
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{textAlign: 'center'}}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
+              Tools
+            </Typography>
+          </ThemeProvider>
+        </Grid>
 
         {begginer.map((item, index) => (
           <Grid item margin={0.5}>
@@ -362,21 +395,32 @@ export default function Head(){
               >{item}</Button>
             </Grid>
           ))} 
+      </Grid>
 
-        {toImprove.map((item, index) => (
+      {/* PROJECTS */}
+      <Grid item container xs={12} sm={12} md={12} lg={12} xl={12} sx={{ bgcolor:'white', padding: 0.5, color:'blue', marginTop: 1.5 }} className='readMe' >  
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{textAlign: 'center'}}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
+              Projects
+            </Typography>
+          </ThemeProvider>
+        </Grid>
+
+        {begginer.map((item, index) => (
           <Grid item margin={0.5}>
             <Button key={index} 
               variant="contained" 
-              color="secondary"
+              color="primary"
               onClick={() => onDownload()}
-              disabled={true}
               >{item}</Button>
             </Grid>
           ))} 
       </Grid>
 
+
       {/** EDUCATION **/}
-      <Grid item xs={12} sm={12} md={6} lg={4} xl={3} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
+      <Grid item xs={12} sm={12} md={6} lg={4} xl={3} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center', marginBottom: 1, marginTop: 1 }} className='blocks'>
         <ThemeProvider theme={theme}>
           <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
             Education
@@ -384,7 +428,7 @@ export default function Head(){
         </ThemeProvider>
         <Degrees />
       </Grid>
-      <Grid item xs={12} sm={12} md={6} lg={4} xl={3} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
+      <Grid item xs={12} sm={12} md={6} lg={4} xl={3} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center',  marginTop: 1}} className='blocks'>
           <ThemeProvider theme={theme}>
             <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
               Skills
@@ -392,7 +436,7 @@ export default function Head(){
           </ThemeProvider>
         <Skills />
       </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={6} xl={4} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center' }} className='blocks'>
+      <Grid item xs={12} sm={12} md={6} lg={4} xl={3} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center',  marginTop: 1 }} className='blocks'>
           <ThemeProvider theme={theme}>
             <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
               Experiences

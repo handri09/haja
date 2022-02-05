@@ -2,6 +2,11 @@
   font-size: large;
 }
 
+.skills {
+  background-color: #001e3c;
+  text-align: justify;
+}
+
 .profile h2 {
   font-size: x-large;
 }
