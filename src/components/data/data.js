@@ -47,6 +47,14 @@ export const begginer  = [
 	"✔️ GIT Handling Merge Conflicts",
 ]
 
+export const projects  = [
+	"All",
+	"React", 
+	"Javascript",
+	"Flask",
+	"Web API",
+]
+
 export const toImprove  = [
 	"🔊 Semantic HTML Tags"]
 	/*

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import  { useState } from 'react'
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -29,7 +30,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
 // Import Data
-import { presentations, skills, toImprove, begginer, profile, test } from '../data/data'
+import { presentations, skills, toImprove, begginer, profile, test, projects } from '../data/data'
 import Accordion from './accordion'
 import Formations from './formations_acc'
 import Body from './body'
@@ -264,6 +265,8 @@ function MiniDrawer() {
 }
 
 export default function Head(){
+  let [js, setJS] = useState(false)
+
   const onDownload = () => {
     const link = document.createElement("a");
     link.download = `Hajaniaina_CV.pdf`;
@@ -335,6 +338,75 @@ export default function Head(){
         </Grid>
       </Grid>
 
+      {/* PROJECTS */}
+      <Grid item container xs={12} sm={12} md={12} lg={12} xl={12} sx={{ bgcolor:'white', padding: 0.5, color:'#001e3c', marginTop: 1.5 }} className='readMe' >  
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{textAlign: 'center'}}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
+              Projects
+            </Typography>
+          </ThemeProvider>
+          <p><em>Some of the projects that I have worked on.</em></p>
+        </Grid>
+        
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{textAlign: 'center'}}>
+          <Stack direction="row"
+            direction="row"
+            justifyContent="center"
+            alignItems="flex-start"
+            spacing={1}>
+            {projects.map((item, index) => (
+            <item>
+              <Button key={index} 
+                variant="outlined" 
+                color="primary"
+                onClick={() => onDownload()}
+                >{item}</Button>
+            </item>
+          ))}      
+          </Stack>
+
+          <Stack direction="row"
+            direction="row"
+            margin={1}
+            justifyContent="center"
+            alignItems="flex-start"
+            spacing={1}>
+            
+              <item>
+
+              </item>
+
+
+              <item>         
+                <Avatar
+                  alt="Haja Niaina"
+                  src='./project.png'
+                  sx={{  width: '80%', height:'80%' }}
+                  variant="rounded" //square
+                  />  
+              </item>
+              <item>         
+                <Avatar
+                  alt="Haja Niaina"
+                  src='./project.png'
+                  sx={{  width: '80%', height:'80%' }}
+                  variant="rounded" //square
+                  />  
+              </item>
+              <item>         
+                <Avatar
+                  alt="Haja Niaina"
+                  src='./project.png'
+                  sx={{   width: '80%', height:'80%'  }}
+                  variant="rounded" //square
+                  />  
+              </item>
+            </Stack>
+        </Grid>        
+
+      </Grid>
+
       {/** EDUCATION **/}
       <Grid item xs={12} sm={12} md={6} lg={4} xl={3} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center', marginBottom: 1, marginTop: 1 }} className='blocks'>
         <ThemeProvider theme={theme}>
@@ -344,6 +416,7 @@ export default function Head(){
         </ThemeProvider>
         <Degrees />
       </Grid>
+
       <Grid item xs={12} sm={12} md={6} lg={4} xl={3} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center',  marginTop: 1}} className='blocks'>
           <ThemeProvider theme={theme}>
             <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
@@ -352,12 +425,13 @@ export default function Head(){
           </ThemeProvider>
         <Skills />
       </Grid>
+
       <Grid item xs={12} sm={12} md={6} lg={4} xl={3} padding={1} sx={{ borderRadius: '5px', color:'#001e3c', textAlign:'center',  marginTop: 1 }} className='blocks'>
-          <ThemeProvider theme={theme}>
-            <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
-              Experiences
-            </Typography>
-          </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <Typography variant="h4" gutterBottom sx={{ color: '#001e3c' }}>
+            Experiences
+          </Typography>
+        </ThemeProvider>
         <Experiences />
       </Grid>
 
